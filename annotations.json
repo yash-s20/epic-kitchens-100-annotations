@@ -1,0 +1,438 @@
+{
+    "version": "2.0.3",
+    "annotation": {
+        "video": {
+            "src": "blob:https://vidat2.davidz.cn/068bb509-fd71-4690-aab4-394c268e620b",
+            "fps": 10,
+            "frames": 8252,
+            "duration": 825.2077166666667,
+            "height": 1080,
+            "width": 1920
+        },
+        "keyframeList": [
+            0,
+            50,
+            100,
+            150,
+            200,
+            250,
+            300,
+            350,
+            400,
+            450,
+            500,
+            550,
+            600,
+            650,
+            700,
+            750,
+            800,
+            850,
+            900,
+            950,
+            1000,
+            1050,
+            1100,
+            1150,
+            1200,
+            1250,
+            1300,
+            1350,
+            1400,
+            1450,
+            1500,
+            1550,
+            1600,
+            1650,
+            1700,
+            1750,
+            1800,
+            1850,
+            1900,
+            1950,
+            2000,
+            2050,
+            2100,
+            2150,
+            2200,
+            2250,
+            2300,
+            2350,
+            2400,
+            2450,
+            2500,
+            2550,
+            2600,
+            2650,
+            2700,
+            2750,
+            2800,
+            2850,
+            2900,
+            2950,
+            3000,
+            3050,
+            3100,
+            3150,
+            3200,
+            3250,
+            3300,
+            3350,
+            3400,
+            3450,
+            3500,
+            3550,
+            3600,
+            3650,
+            3700,
+            3750,
+            3800,
+            3850,
+            3900,
+            3950,
+            4000,
+            4050,
+            4100,
+            4150,
+            4200,
+            4250,
+            4300,
+            4350,
+            4400,
+            4450,
+            4500,
+            4550,
+            4600,
+            4650,
+            4700,
+            4750,
+            4800,
+            4850,
+            4900,
+            4950,
+            5000,
+            5050,
+            5100,
+            5150,
+            5200,
+            5250,
+            5300,
+            5350,
+            5400,
+            5450,
+            5500,
+            5550,
+            5600,
+            5650,
+            5700,
+            5750,
+            5800,
+            5850,
+            5900,
+            5950,
+            6000,
+            6050,
+            6100,
+            6150,
+            6200,
+            6250,
+            6300,
+            6350,
+            6400,
+            6450,
+            6500,
+            6550,
+            6600,
+            6650,
+            6700,
+            6750,
+            6800,
+            6850,
+            6900,
+            6950,
+            7000,
+            7050,
+            7100,
+            7150,
+            7200,
+            7250,
+            7300,
+            7350,
+            7400,
+            7450,
+            7500,
+            7550,
+            7600,
+            7650,
+            7700,
+            7750,
+            7800,
+            7850,
+            7900,
+            7950,
+            8000,
+            8050,
+            8100,
+            8150,
+            8200,
+            8250
+        ],
+        "objectAnnotationListMap": {},
+        "regionAnnotationListMap": {},
+        "skeletonAnnotationListMap": {},
+        "actionAnnotationList": [
+            {
+                "start": 7.0,
+                "end": 13.0,
+                "action": 1,
+                "object": 1,
+                "color": "#72A4C8",
+                "description": "wash forks"
+            },
+            {
+                "start": 14.0,
+                "end": 18.0,
+                "action": 1,
+                "object": 1,
+                "color": "#B93575",
+                "description": "wash forks"
+            },
+            {
+                "start": 59.0,
+                "end": 67.0,
+                "action": 2,
+                "object": 2,
+                "color": "#EAC359",
+                "description": "rinse plate"
+            },
+            {
+                "start": 63.0,
+                "end": 67.0,
+                "action": 2,
+                "object": 2,
+                "color": "#DCEA93",
+                "description": "rinse plate"
+            },
+            {
+                "start": 632.0,
+                "end": 637.0,
+                "action": 1,
+                "object": 3,
+                "color": "#1C1C9E",
+                "description": "wash knife"
+            },
+            {
+                "start": 638.0,
+                "end": 644.0,
+                "action": 2,
+                "object": 3,
+                "color": "#FF6F89",
+                "description": "rinse knife"
+            },
+            {
+                "start": 649.0,
+                "end": 655.0,
+                "action": 1,
+                "object": 4,
+                "color": "#A4FC11",
+                "description": "wash cutting board"
+            },
+            {
+                "start": 654.0,
+                "end": 659.0,
+                "action": 1,
+                "object": 5,
+                "color": "#67D054",
+                "description": "wash board"
+            },
+            {
+                "start": 79.0,
+                "end": 82.0,
+                "action": 1,
+                "object": 6,
+                "color": "#D32410",
+                "description": "wash cup"
+            },
+            {
+                "start": 82.0,
+                "end": 86.0,
+                "action": 1,
+                "object": 6,
+                "color": "#388EC4",
+                "description": "wash cup"
+            },
+            {
+                "start": 87.0,
+                "end": 89.0,
+                "action": 2,
+                "object": 6,
+                "color": "#41D370",
+                "description": "rinse cup"
+            },
+            {
+                "start": 89.0,
+                "end": 92.0,
+                "action": 2,
+                "object": 6,
+                "color": "#1CE029",
+                "description": "rinse cup"
+            },
+            {
+                "start": 92.0,
+                "end": 97.0,
+                "action": 2,
+                "object": 6,
+                "color": "#A8AA60",
+                "description": "rinse cup"
+            },
+            {
+                "start": 19.0,
+                "end": 23.0,
+                "action": 2,
+                "object": 1,
+                "color": "#3FCEF4",
+                "description": "rinse forks"
+            },
+            {
+                "start": 192.0,
+                "end": 195.0,
+                "action": 2,
+                "object": 6,
+                "color": "#7148AA",
+                "description": "rinse cup"
+            },
+            {
+                "start": 196.0,
+                "end": 200.0,
+                "action": 1,
+                "object": 6,
+                "color": "#07DFDE",
+                "description": "wash cup"
+            },
+            {
+                "start": 201.0,
+                "end": 204.0,
+                "action": 1,
+                "object": 6,
+                "color": "#AE5DBC",
+                "description": "wash cup"
+            },
+            {
+                "start": 205.0,
+                "end": 207.0,
+                "action": 1,
+                "object": 6,
+                "color": "#AAC6CA",
+                "description": "wash cup"
+            },
+            {
+                "start": 217.0,
+                "end": 232.0,
+                "action": 2,
+                "object": 6,
+                "color": "#10613E",
+                "description": "rinse cup"
+            },
+            {
+                "start": 35.0,
+                "end": 39.0,
+                "action": 1,
+                "object": 2,
+                "color": "#9A98D6",
+                "description": "wash plate"
+            },
+            {
+                "start": 38.0,
+                "end": 42.0,
+                "action": 1,
+                "object": 2,
+                "color": "#22E31D",
+                "description": "wash plate"
+            },
+            {
+                "start": 42.0,
+                "end": 58.0,
+                "action": 1,
+                "object": 2,
+                "color": "#801F15",
+                "description": "wash plate"
+            }
+        ]
+    },
+    "config": {
+        "objectLabelData": [
+            {
+                "id": 0,
+                "name": "default",
+                "color": "#00FF00"
+            },
+            {
+                "id": 1,
+                "name": "fork",
+                "color": "#44D10A"
+            },
+            {
+                "id": 2,
+                "name": "plate",
+                "color": "#156C94"
+            },
+            {
+                "id": 3,
+                "name": "knife",
+                "color": "#D0CD86"
+            },
+            {
+                "id": 4,
+                "name": "board:cutting",
+                "color": "#466A46"
+            },
+            {
+                "id": 5,
+                "name": "board",
+                "color": "#D5F9AA"
+            },
+            {
+                "id": 6,
+                "name": "cup",
+                "color": "#4815CC"
+            }
+        ],
+        "actionLabelData": [
+            {
+                "id": 0,
+                "name": "default",
+                "color": "#0000FF",
+                "objects": [
+                    0
+                ]
+            },
+            {
+                "id": 1,
+                "name": "wash",
+                "color": "#926D59",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            },
+            {
+                "id": 2,
+                "name": "rinse",
+                "color": "#517832",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            }
+        ],
+        "skeletonTypeData": []
+    }
+}

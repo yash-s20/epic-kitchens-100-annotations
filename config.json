@@ -1,0 +1,76 @@
+{
+    "objectLabelData": [
+        {
+            "id": 0,
+            "name": "default",
+            "color": "#00FF00"
+        },
+        {
+            "id": 1,
+            "name": "fork",
+            "color": "#44D10A"
+        },
+        {
+            "id": 2,
+            "name": "plate",
+            "color": "#156C94"
+        },
+        {
+            "id": 3,
+            "name": "knife",
+            "color": "#D0CD86"
+        },
+        {
+            "id": 4,
+            "name": "board:cutting",
+            "color": "#466A46"
+        },
+        {
+            "id": 5,
+            "name": "board",
+            "color": "#D5F9AA"
+        },
+        {
+            "id": 6,
+            "name": "cup",
+            "color": "#4815CC"
+        }
+    ],
+    "actionLabelData": [
+        {
+            "id": 0,
+            "name": "default",
+            "color": "#0000FF",
+            "objects": [
+                0
+            ]
+        },
+        {
+            "id": 1,
+            "name": "wash",
+            "color": "#926D59",
+            "objects": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "id": 2,
+            "name": "rinse",
+            "color": "#517832",
+            "objects": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        }
+    ],
+    "skeletonTypeData": []
+}
