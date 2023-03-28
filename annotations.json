@@ -2,10 +2,10 @@
     "version": "2.0.3",
     "annotation": {
         "video": {
-            "src": "blob:https://vidat2.davidz.cn/068bb509-fd71-4690-aab4-394c268e620b",
+            "src": "blob:https://vidat2.davidz.cn/131b9a09-ca48-4751-87f0-18c7f3234675",
             "fps": 10,
             "frames": 8252,
-            "duration": 825.2077166666667,
+            "duration": 825.216,
             "height": 1080,
             "width": 1920
         },
@@ -182,180 +182,1044 @@
         "skeletonAnnotationListMap": {},
         "actionAnnotationList": [
             {
+                "start": 0,
+                "end": 7.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
                 "start": 7.0,
                 "end": 13.0,
                 "action": 1,
                 "object": 1,
-                "color": "#72A4C8",
+                "color": "#390C8C",
                 "description": "wash forks"
+            },
+            {
+                "start": 13.0,
+                "end": 14.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
             },
             {
                 "start": 14.0,
                 "end": 18.0,
                 "action": 1,
                 "object": 1,
-                "color": "#B93575",
+                "color": "#7D7247",
                 "description": "wash forks"
             },
             {
-                "start": 59.0,
-                "end": 67.0,
-                "action": 2,
-                "object": 2,
-                "color": "#EAC359",
-                "description": "rinse plate"
+                "start": 17.0,
+                "end": 18.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
             },
             {
-                "start": 63.0,
-                "end": 67.0,
-                "action": 2,
-                "object": 2,
-                "color": "#DCEA93",
-                "description": "rinse plate"
-            },
-            {
-                "start": 632.0,
-                "end": 637.0,
-                "action": 1,
-                "object": 3,
-                "color": "#1C1C9E",
-                "description": "wash knife"
-            },
-            {
-                "start": 638.0,
-                "end": 644.0,
-                "action": 2,
-                "object": 3,
-                "color": "#FF6F89",
-                "description": "rinse knife"
-            },
-            {
-                "start": 649.0,
-                "end": 655.0,
-                "action": 1,
-                "object": 4,
-                "color": "#A4FC11",
-                "description": "wash cutting board"
-            },
-            {
-                "start": 654.0,
-                "end": 659.0,
-                "action": 1,
+                "start": 18.0,
+                "end": 19.0,
+                "action": 6,
                 "object": 5,
-                "color": "#67D054",
-                "description": "wash board"
+                "color": "#46FC2E",
+                "description": "open tap"
             },
             {
-                "start": 79.0,
-                "end": 82.0,
-                "action": 1,
-                "object": 6,
-                "color": "#D32410",
-                "description": "wash cup"
-            },
-            {
-                "start": 82.0,
-                "end": 86.0,
-                "action": 1,
-                "object": 6,
-                "color": "#388EC4",
-                "description": "wash cup"
-            },
-            {
-                "start": 87.0,
-                "end": 89.0,
-                "action": 2,
-                "object": 6,
-                "color": "#41D370",
-                "description": "rinse cup"
-            },
-            {
-                "start": 89.0,
-                "end": 92.0,
-                "action": 2,
-                "object": 6,
-                "color": "#1CE029",
-                "description": "rinse cup"
-            },
-            {
-                "start": 92.0,
-                "end": 97.0,
-                "action": 2,
-                "object": 6,
-                "color": "#A8AA60",
-                "description": "rinse cup"
+                "start": 18.0,
+                "end": 19.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
             },
             {
                 "start": 19.0,
                 "end": 23.0,
                 "action": 2,
                 "object": 1,
-                "color": "#3FCEF4",
+                "color": "#654EBF",
                 "description": "rinse forks"
             },
             {
-                "start": 192.0,
-                "end": 195.0,
-                "action": 2,
-                "object": 6,
-                "color": "#7148AA",
-                "description": "rinse cup"
+                "start": 23.0,
+                "end": 29.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
             },
             {
-                "start": 196.0,
-                "end": 200.0,
-                "action": 1,
-                "object": 6,
-                "color": "#07DFDE",
-                "description": "wash cup"
+                "start": 29.0,
+                "end": 30.0,
+                "action": 5,
+                "object": 5,
+                "color": "#1D7B28",
+                "description": "close tap"
             },
             {
-                "start": 201.0,
-                "end": 204.0,
-                "action": 1,
-                "object": 6,
-                "color": "#AE5DBC",
-                "description": "wash cup"
+                "start": 30.0,
+                "end": 31.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
             },
             {
-                "start": 205.0,
-                "end": 207.0,
-                "action": 1,
-                "object": 6,
-                "color": "#AAC6CA",
-                "description": "wash cup"
+                "start": 31.0,
+                "end": 33.0,
+                "action": 4,
+                "object": 2,
+                "color": "#0A7570",
+                "description": "take plate"
             },
             {
-                "start": 217.0,
-                "end": 232.0,
-                "action": 2,
-                "object": 6,
-                "color": "#10613E",
-                "description": "rinse cup"
+                "start": 31.0,
+                "end": 32.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 32.0,
+                "end": 34.0,
+                "action": 6,
+                "object": 5,
+                "color": "#752210",
+                "description": "open tap"
+            },
+            {
+                "start": 34.0,
+                "end": 35.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
             },
             {
                 "start": 35.0,
                 "end": 39.0,
                 "action": 1,
                 "object": 2,
-                "color": "#9A98D6",
+                "color": "#8EF86D",
                 "description": "wash plate"
+            },
+            {
+                "start": 37.0,
+                "end": 38.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
             },
             {
                 "start": 38.0,
                 "end": 42.0,
                 "action": 1,
                 "object": 2,
-                "color": "#22E31D",
+                "color": "#B5D8D2",
                 "description": "wash plate"
+            },
+            {
+                "start": 41.0,
+                "end": 42.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
             },
             {
                 "start": 42.0,
                 "end": 58.0,
                 "action": 1,
                 "object": 2,
-                "color": "#801F15",
+                "color": "#1FCEAD",
                 "description": "wash plate"
+            },
+            {
+                "start": 58.0,
+                "end": 59.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 59.0,
+                "end": 67.0,
+                "action": 2,
+                "object": 2,
+                "color": "#342CD8",
+                "description": "rinse plate"
+            },
+            {
+                "start": 62.0,
+                "end": 63.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 63.0,
+                "end": 67.0,
+                "action": 2,
+                "object": 2,
+                "color": "#100F2F",
+                "description": "rinse plate"
+            },
+            {
+                "start": 67.0,
+                "end": 74.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 74.0,
+                "end": 75.0,
+                "action": 5,
+                "object": 5,
+                "color": "#E58E03",
+                "description": "close tap"
+            },
+            {
+                "start": 75.0,
+                "end": 76.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 76.0,
+                "end": 77.0,
+                "action": 4,
+                "object": 8,
+                "color": "#749428",
+                "description": "take cup"
+            },
+            {
+                "start": 76.0,
+                "end": 77.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 77.0,
+                "end": 78.0,
+                "action": 6,
+                "object": 5,
+                "color": "#53BDB5",
+                "description": "open tap"
+            },
+            {
+                "start": 78.0,
+                "end": 79.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 79.0,
+                "end": 82.0,
+                "action": 1,
+                "object": 8,
+                "color": "#7510A1",
+                "description": "wash cup"
+            },
+            {
+                "start": 81.0,
+                "end": 82.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 82.0,
+                "end": 86.0,
+                "action": 1,
+                "object": 8,
+                "color": "#FFCAEA",
+                "description": "wash cup"
+            },
+            {
+                "start": 85.0,
+                "end": 86.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 86.0,
+                "end": 87.0,
+                "action": 6,
+                "object": 5,
+                "color": "#498747",
+                "description": "open tap"
+            },
+            {
+                "start": 86.0,
+                "end": 87.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 87.0,
+                "end": 89.0,
+                "action": 2,
+                "object": 8,
+                "color": "#7E86DB",
+                "description": "rinse cup"
+            },
+            {
+                "start": 88.0,
+                "end": 89.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 89.0,
+                "end": 92.0,
+                "action": 2,
+                "object": 8,
+                "color": "#CCB970",
+                "description": "rinse cup"
+            },
+            {
+                "start": 91.0,
+                "end": 92.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 92.0,
+                "end": 97.0,
+                "action": 2,
+                "object": 8,
+                "color": "#18384E",
+                "description": "rinse cup"
+            },
+            {
+                "start": 96.0,
+                "end": 97.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 97.0,
+                "end": 98.0,
+                "action": 5,
+                "object": 5,
+                "color": "#51D820",
+                "description": "close tap"
+            },
+            {
+                "start": 98.0,
+                "end": 106.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 106.0,
+                "end": 109.0,
+                "action": 4,
+                "object": 11,
+                "color": "#C5C3EF",
+                "description": "take a pan"
+            },
+            {
+                "start": 109.0,
+                "end": 110.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 110.0,
+                "end": 112.0,
+                "action": 7,
+                "object": 11,
+                "color": "#80053A",
+                "description": "put pan on stove"
+            },
+            {
+                "start": 111.0,
+                "end": 112.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 112.0,
+                "end": 112.0,
+                "action": 6,
+                "object": 12,
+                "color": "#88AE39",
+                "description": "turn on stove"
+            },
+            {
+                "start": 112.0,
+                "end": 122.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 122.0,
+                "end": 123.0,
+                "action": 4,
+                "object": 13,
+                "color": "#96DE50",
+                "description": "take chopping board"
+            },
+            {
+                "start": 123.0,
+                "end": 124.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 124.0,
+                "end": 125.0,
+                "action": 7,
+                "object": 13,
+                "color": "#E80186",
+                "description": "put chopping board on counter"
+            },
+            {
+                "start": 125.0,
+                "end": 127.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 127.0,
+                "end": 128.0,
+                "action": 8,
+                "object": 10,
+                "color": "#5B3698",
+                "description": "open fridge"
+            },
+            {
+                "start": 128.0,
+                "end": 132.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 132.0,
+                "end": 133.0,
+                "action": 9,
+                "object": 10,
+                "color": "#5200A5",
+                "description": "close fridge"
+            },
+            {
+                "start": 133.0,
+                "end": 187.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 187.0,
+                "end": 188.0,
+                "action": 3,
+                "object": 8,
+                "color": "#FA0939",
+                "description": "pick up cup"
+            },
+            {
+                "start": 188.0,
+                "end": 189.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 189.0,
+                "end": 191.0,
+                "action": 6,
+                "object": 9,
+                "color": "#B99D7A",
+                "description": "turn on switch"
+            },
+            {
+                "start": 191.0,
+                "end": 192.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 192.0,
+                "end": 195.0,
+                "action": 2,
+                "object": 8,
+                "color": "#2BF823",
+                "description": "rinse cup"
+            },
+            {
+                "start": 195.0,
+                "end": 196.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 196.0,
+                "end": 200.0,
+                "action": 1,
+                "object": 8,
+                "color": "#4041F3",
+                "description": "wash cup"
+            },
+            {
+                "start": 200.0,
+                "end": 201.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 201.0,
+                "end": 204.0,
+                "action": 1,
+                "object": 8,
+                "color": "#5487D8",
+                "description": "wash cup"
+            },
+            {
+                "start": 204.0,
+                "end": 205.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 205.0,
+                "end": 207.0,
+                "action": 1,
+                "object": 8,
+                "color": "#6C669F",
+                "description": "wash cup"
+            },
+            {
+                "start": 207.0,
+                "end": 217.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 217.0,
+                "end": 232.0,
+                "action": 2,
+                "object": 8,
+                "color": "#CCBFE0",
+                "description": "rinse cup"
+            },
+            {
+                "start": 232.0,
+                "end": 233.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 233.0,
+                "end": 234.0,
+                "action": 5,
+                "object": 5,
+                "color": "#E73D7E",
+                "description": "close tap"
+            },
+            {
+                "start": 234.0,
+                "end": 246.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 246.0,
+                "end": 247.0,
+                "action": 6,
+                "object": 5,
+                "color": "#7320AD",
+                "description": "open tap"
+            },
+            {
+                "start": 247.0,
+                "end": 261.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 261.0,
+                "end": 262.0,
+                "action": 6,
+                "object": 5,
+                "color": "#03241E",
+                "description": "open tap"
+            },
+            {
+                "start": 262.0,
+                "end": 339.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 339.0,
+                "end": 341.0,
+                "action": 10,
+                "object": 14,
+                "color": "#A92479",
+                "description": "cover grinder"
+            },
+            {
+                "start": 341.0,
+                "end": 368.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 368.0,
+                "end": 369.0,
+                "action": 8,
+                "object": 14,
+                "color": "#43F27C",
+                "description": "open grinder"
+            },
+            {
+                "start": 369.0,
+                "end": 374.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 374.0,
+                "end": 375.0,
+                "action": 5,
+                "object": 9,
+                "color": "#F2D061",
+                "description": "turn off the switch"
+            },
+            {
+                "start": 375.0,
+                "end": 404.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 404.0,
+                "end": 405.0,
+                "action": 11,
+                "object": 15,
+                "color": "#3031DC",
+                "description": "unplug power cord"
+            },
+            {
+                "start": 405.0,
+                "end": 409.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 409.0,
+                "end": 411.0,
+                "action": 12,
+                "object": 14,
+                "color": "#EF1B32",
+                "description": "store grinder"
+            },
+            {
+                "start": 411.0,
+                "end": 450.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 450.0,
+                "end": 451.0,
+                "action": 6,
+                "object": 5,
+                "color": "#377F62",
+                "description": "open tap"
+            },
+            {
+                "start": 451.0,
+                "end": 457.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 457.0,
+                "end": 458.0,
+                "action": 5,
+                "object": 5,
+                "color": "#61E547",
+                "description": "close tap"
+            },
+            {
+                "start": 458.0,
+                "end": 476.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 476.0,
+                "end": 477.0,
+                "action": 13,
+                "object": 16,
+                "color": "#D85D8E",
+                "description": "place jug"
+            },
+            {
+                "start": 477.0,
+                "end": 580.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 580.0,
+                "end": 582.0,
+                "action": 3,
+                "object": 3,
+                "color": "#6F770D",
+                "description": "pick up spoon"
+            },
+            {
+                "start": 582.0,
+                "end": 606.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 606.0,
+                "end": 608.0,
+                "action": 4,
+                "object": 4,
+                "color": "#65D670",
+                "description": "take cutting board"
+            },
+            {
+                "start": 608.0,
+                "end": 632.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 632.0,
+                "end": 637.0,
+                "action": 1,
+                "object": 6,
+                "color": "#51D8AE",
+                "description": "wash knife"
+            },
+            {
+                "start": 637.0,
+                "end": 638.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 638.0,
+                "end": 639.0,
+                "action": 6,
+                "object": 5,
+                "color": "#8E4F6E",
+                "description": "turn on tap"
+            },
+            {
+                "start": 637.0,
+                "end": 638.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 638.0,
+                "end": 639.0,
+                "action": 6,
+                "object": 5,
+                "color": "#AC342F",
+                "description": "turn on tap"
+            },
+            {
+                "start": 637.0,
+                "end": 638.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 638.0,
+                "end": 644.0,
+                "action": 2,
+                "object": 6,
+                "color": "#C231B7",
+                "description": "rinse knife"
+            },
+            {
+                "start": 643.0,
+                "end": 644.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 644.0,
+                "end": 645.0,
+                "action": 5,
+                "object": 5,
+                "color": "#B08716",
+                "description": "turn off tap"
+            },
+            {
+                "start": 645.0,
+                "end": 649.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 649.0,
+                "end": 655.0,
+                "action": 1,
+                "object": 4,
+                "color": "#EB3FC1",
+                "description": "wash cutting board"
+            },
+            {
+                "start": 653.0,
+                "end": 654.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicate placeholder"
+            },
+            {
+                "start": 654.0,
+                "end": 659.0,
+                "action": 1,
+                "object": 7,
+                "color": "#2896B9",
+                "description": "wash board"
+            },
+            {
+                "start": 659.0,
+                "end": 660.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 660.0,
+                "end": 661.0,
+                "action": 5,
+                "object": 5,
+                "color": "#622317",
+                "description": "close tap"
+            },
+            {
+                "start": 661.0,
+                "end": 743.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 743.0,
+                "end": 745.0,
+                "action": 4,
+                "object": 2,
+                "color": "#7733C2",
+                "description": "take plate"
+            },
+            {
+                "start": 745.0,
+                "end": 746.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 746.0,
+                "end": 747.0,
+                "action": 7,
+                "object": 2,
+                "color": "#8EE8BA",
+                "description": "put plate on counter top"
+            },
+            {
+                "start": 747.0,
+                "end": 761.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 761.0,
+                "end": 762.0,
+                "action": 5,
+                "object": 9,
+                "color": "#6B8824",
+                "description": "turn off switch"
+            },
+            {
+                "start": 762.0,
+                "end": 792.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 792.0,
+                "end": 793.0,
+                "action": 3,
+                "object": 8,
+                "color": "#577D53",
+                "description": "pick up cup"
+            },
+            {
+                "start": 793.0,
+                "end": 806.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 806.0,
+                "end": 807.0,
+                "action": 8,
+                "object": 10,
+                "color": "#ECC28A",
+                "description": "open fridge"
+            },
+            {
+                "start": 807.0,
+                "end": 809.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 809.0,
+                "end": 810.0,
+                "action": 9,
+                "object": 10,
+                "color": "#70A61C",
+                "description": "close fridge"
+            },
+            {
+                "start": 810.0,
+                "end": 816.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 816.0,
+                "end": 817.0,
+                "action": 8,
+                "object": 10,
+                "color": "#CD8921",
+                "description": "open fridge"
+            },
+            {
+                "start": 817.0,
+                "end": 818.0,
+                "action": 0,
+                "object": 0,
+                "color": "#FFFF00",
+                "description": "state predicates"
+            },
+            {
+                "start": 818.0,
+                "end": 818.0,
+                "action": 9,
+                "object": 10,
+                "color": "#6CA16C",
+                "description": "close fridge"
             }
         ]
     },
@@ -369,32 +1233,82 @@
             {
                 "id": 1,
                 "name": "fork",
-                "color": "#44D10A"
+                "color": "#EC7F26"
             },
             {
                 "id": 2,
                 "name": "plate",
-                "color": "#156C94"
+                "color": "#E23219"
             },
             {
                 "id": 3,
-                "name": "knife",
-                "color": "#D0CD86"
+                "name": "spoon",
+                "color": "#072F79"
             },
             {
                 "id": 4,
                 "name": "board:cutting",
-                "color": "#466A46"
+                "color": "#55D0F8"
             },
             {
                 "id": 5,
-                "name": "board",
-                "color": "#D5F9AA"
+                "name": "tap",
+                "color": "#F66DCD"
             },
             {
                 "id": 6,
+                "name": "knife",
+                "color": "#1E54C2"
+            },
+            {
+                "id": 7,
+                "name": "board",
+                "color": "#01C787"
+            },
+            {
+                "id": 8,
                 "name": "cup",
-                "color": "#4815CC"
+                "color": "#E892D8"
+            },
+            {
+                "id": 9,
+                "name": "switch",
+                "color": "#F94F61"
+            },
+            {
+                "id": 10,
+                "name": "fridge",
+                "color": "#976F1D"
+            },
+            {
+                "id": 11,
+                "name": "pan",
+                "color": "#1FA01D"
+            },
+            {
+                "id": 12,
+                "name": "stove",
+                "color": "#19F450"
+            },
+            {
+                "id": 13,
+                "name": "board:chopping",
+                "color": "#1D295F"
+            },
+            {
+                "id": 14,
+                "name": "grinder",
+                "color": "#232278"
+            },
+            {
+                "id": 15,
+                "name": "cord:power",
+                "color": "#CE3D7E"
+            },
+            {
+                "id": 16,
+                "name": "jug",
+                "color": "#1429D6"
             }
         ],
         "actionLabelData": [
@@ -409,27 +1323,300 @@
             {
                 "id": 1,
                 "name": "wash",
-                "color": "#926D59",
+                "color": "#A18568",
                 "objects": [
                     1,
                     2,
                     3,
                     4,
                     5,
-                    6
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
                 ]
             },
             {
                 "id": 2,
                 "name": "rinse",
-                "color": "#517832",
+                "color": "#A07A87",
                 "objects": [
                     1,
                     2,
                     3,
                     4,
                     5,
-                    6
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 3,
+                "name": "pick-up",
+                "color": "#CA4399",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 4,
+                "name": "take",
+                "color": "#EAA125",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 5,
+                "name": "turn-off",
+                "color": "#04EA33",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 6,
+                "name": "turn-on",
+                "color": "#256D87",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 7,
+                "name": "put-on",
+                "color": "#43B223",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 8,
+                "name": "open",
+                "color": "#7DBD91",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 9,
+                "name": "close",
+                "color": "#50E09A",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 10,
+                "name": "cover",
+                "color": "#049935",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 11,
+                "name": "unplug",
+                "color": "#44873B",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 12,
+                "name": "store",
+                "color": "#364F8B",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                ]
+            },
+            {
+                "id": 13,
+                "name": "place",
+                "color": "#906BAF",
+                "objects": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
                 ]
             }
         ],

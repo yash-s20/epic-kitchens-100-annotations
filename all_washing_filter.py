@@ -8,9 +8,9 @@ verb_c_f = 'EPIC_100_verb_classes.csv'
 
 # val_f = 'EPIC_100_validation.csv'
 
-class_to_wash = {"cutlery", "container", "crockery", "utensils", "cookware"}
+class_to_wash = {"cutlery", "container", "crockery", "utensils", "cookware", "appliances"}
 
-class_for_wash = {"clean",}
+class_for_wash = {"clean", "access", "block", "retrieve", "leave"}
 
 def get_instances(row):
     def strip(x):

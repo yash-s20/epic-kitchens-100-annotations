@@ -4,6 +4,8 @@ import json
 import time
 import datetime
 import random
+
+random.seed(42)
 def r():
     return random.randint(0,255)
 
@@ -36,6 +38,8 @@ annotation = {
     "skeletonAnnotationListMap": {},
     "actionAnnotationList": [],
 }
+
+tot_data = []
 with open(rf, 'r') as csvf:
     for row in csv.reader(csvf, delimiter=',', quotechar='"'):
         if video not in row[0]:
@@ -59,14 +63,40 @@ with open(rf, 'r') as csvf:
         et = datetime.timedelta(hours=t.tm_hour,minutes=t.tm_min,seconds=t.tm_sec).total_seconds()
         print(row[4], row[5])
         print(st, et)
+        old_et = et
+        tot_data.append((st, et, verbs[v], objects[obj], hex_r(), row[8].strip()))
+
+old_et = 0
+tot_data.sort()
+
+for d in tot_data:
+    if old_et < d[0]:
         action_data.append({
-            "start": st,
-            "end": et,
-            "action": verbs[v],
-            "object": objects[obj],
-            "color": hex_r(),
-            "description": row[8].strip()
+            "start": old_et,
+            "end": d[0],
+            "action": 0,
+            "object": 0,
+            "color": "#FFFF00",
+            "description": "state predicates"
         })
+    else:
+        action_data.append({
+            "start": d[0] - 1,
+            "end": d[0],
+            "action": 0,
+            "object": 0,
+            "color": "#FFFF00",
+            "description": "state predicate placeholder"
+        })
+    old_et = d[1]
+    action_data.append({
+        "start": d[0],
+        "end": d[1],
+        "action": d[2],
+        "object": d[3],
+        "color": d[4],
+        "description": d[5],
+    })
 
 obj_id_list = list(objects.values())
 obj_data = [
