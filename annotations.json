@@ -2,10 +2,10 @@
     "version": "2.0.3",
     "annotation": {
         "video": {
-            "src": "blob:https://vidat2.davidz.cn/131b9a09-ca48-4751-87f0-18c7f3234675",
+            "src": "blob:https://vidat2.davidz.cn/b3c4bdff-6bb0-4a59-a0e6-ea4ee861bda4",
             "fps": 10,
             "frames": 8252,
-            "duration": 825.216,
+            "duration": 825.2077166666667,
             "height": 1080,
             "width": 1920
         },

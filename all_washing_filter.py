@@ -8,9 +8,9 @@ verb_c_f = 'EPIC_100_verb_classes.csv'
 
 # val_f = 'EPIC_100_validation.csv'
 
-class_to_wash = {"cutlery", "container", "crockery", "utensils", "cookware", "appliances"}
+class_to_wash = {"cutlery", "container", "crockery", "utensils", "cookware", "cleaning equipment and material"}
 
-class_for_wash = {"clean", "access", "block", "retrieve", "leave"}
+class_for_wash = {"clean", "access", "block", "retrieve", "leave", "distribute"}
 
 def get_instances(row):
     def strip(x):
@@ -35,6 +35,7 @@ with open(noun_c_f, 'r') as nof, open(verb_c_f, 'r') as vef, open(sys.argv[1], '
     # print(v_inst)
     # print("Nouns:")
     # print(n_inst)
+    # exit()
     for row in csv.reader(tf, delimiter=',', quotechar='"'):
         if row[9] in v_inst and row[11] in n_inst:
             print(", ".join(row))

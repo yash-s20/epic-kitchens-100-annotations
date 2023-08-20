@@ -1,3 +1,4 @@
+narration_id,participant_id,video_id,narration_timestamp,start_timestamp,stop_timestamp,start_frame,stop_frame,narration,verb,verb_class,noun,noun_class,all_nouns,all_noun_classes
 P01_01_1, P01, P01_01, 00:00:02.629, 00:00:04.37, 00:00:06.17, 262, 370, turn on light, turn-on, 6, light, 114, ['light'], [114]
 P01_01_100, P01, P01_01, 00:07:57.919, 00:07:59.75, 00:08:00.88, 28785, 28852, take cup, take, 0, cup, 13, ['cup'], [13]
 P01_01_102, P01, P01_01, 00:08:01.229, 00:08:02.13, 00:08:03.00, 28927, 28980, put cup into cupboard, put-into, 5, cup, 13, ['cup', 'cupboard'], [13, 3]
