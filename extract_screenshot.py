@@ -93,7 +93,7 @@ Steps of this pipeline:
             filtered_data = data[:args.max_actions]
             if len(filtered_data) < args.min_actions:
                 continue
-            _data = [action for action in filtered_data if "wash" in action["narration"] or "clean" in action["narration"]]
+            _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
             if not _data:
                 continue
             fil_video_jsons[episode] = filtered_data
