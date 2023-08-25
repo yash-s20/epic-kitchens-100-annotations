@@ -6,6 +6,8 @@ import random
 import json
 import pprint
 import datetime
+MAX_EPISODES = -1 # -1 for all
+
 
 if __name__ == "__main__":
     # parse dish washing csv to extract screenshots from video using ffmpeg and save them in a unique folder for each video
@@ -18,15 +20,18 @@ if __name__ == "__main__":
     parser.add_argument('--seed', type=int, default=42, help='random seed')
     parser.add_argument('--csv-file', type=str, help='csv file to read from')
     parser.add_argument('--video-dir', type=str, help='directory to read videos from')
-    parser.add_argument('--out-dir', type=str, help='directory to save screenshots to')
+    parser.add_argument('--out-image-dir', type=str, help='directory to save screenshots to')
     parser.add_argument('--start-step', type=int, default=1, help="""
-Steps of this pipeline:
+                        Steps of this pipeline:
                         1. Convert csv to json
                         2. Filter json to include dishwashing and clip at max_time
                         3. Extract screenshots from videos
-""")
+                        """)
     parser.add_argument('--min-actions', type=int, default=5, help='minimum number of actions for a video to be considered')
     parser.add_argument('--max-actions', type=int, default=100, help='each episode is clipped at max-actions')
+    parser.add_argument('--no-image', action='store_true', help='do not extract images, simply make prompts using action annotations')
+    parser.add_argument('--json-template-file', type=str, default='epic-kitchens.json', help='json template file to use for making prompts')
+    parser.add_argument('--out-json-file', type=str, required=True, help='json file to save prompts to')
     args = parser.parse_args()
     pp = pprint.PrettyPrinter(indent=4)
     df = csv.reader(open(args.csv_file, 'r'))
@@ -90,24 +95,47 @@ Steps of this pipeline:
             start_timestamp = min([action["timestamp"] for action in data])
             end_timestamp = max([action["timestamp"] for action in data])
             # print(start_timestamp, end_timestamp)
-            filtered_data = data[:args.max_actions]
-            if len(filtered_data) < args.min_actions:
-                continue
-            _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
-            if not _data:
-                continue
-            fil_video_jsons[episode] = filtered_data
+            for i in range(len(data)//args.max_actions + 1):
+                filtered_data = data[i*args.max_actions:(i+1)*args.max_actions]
+                if len(filtered_data) < args.min_actions:
+                    continue
+                _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
+                if not _data:
+                    continue
+                fil_video_jsons[episode + f"__{i}"] = filtered_data
             # can use entire episode
             x += len(filtered_data)
         print(x)
     if args.start_step <= 2:
         json.dump(fil_video_jsons, open(f"{args.csv_file[:-4]}_filter.json", 'w'))
         print("done!")
-    pp.pprint(len(fil_video_jsons))
+    pp.pprint(f"Total episodes - {len(fil_video_jsons)}")
+    print("Extracting screenshots", end="...")
     if args.start_step > 3:
         print("Skipping extract screenshots")
         print("Exiting!")
         exit()
-    else:
-        print("Extracting screenshots", end="...")
+    elif not args.no_image:
+        raise NotImplementedError
         # this part needs to see what is the format of the videos
+    else:
+        template = json.load(open(args.json_template_file, 'r'))
+        conversations = template["prompts"]
+        i = 0
+        for video_id, episode in fil_video_jsons.items():
+            if i == MAX_EPISODES:
+                break
+            i += 1
+            conversation = {}
+            conversation["id"] = video_id
+            conversation["conversations"] = []
+            for action in episode:
+                conversation["conversations"].append({
+                    "from": "human",
+                    "value": action["narration"]
+                })
+            print(len(conversation["conversations"]))
+            conversations.append(conversation)
+        # print(template)
+        json.dump(template, open(args.out_json_file, 'w'), indent=4)
+        print("done!")
