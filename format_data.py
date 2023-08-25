@@ -115,9 +115,6 @@ if __name__ == "__main__":
         print("Skipping extract screenshots")
         print("Exiting!")
         exit()
-    elif not args.no_image:
-        raise NotImplementedError
-        # this part needs to see what is the format of the videos
     else:
         template = json.load(open(args.json_template_file, 'r'))
         conversations = template["prompts"]
@@ -128,11 +125,15 @@ if __name__ == "__main__":
             i += 1
             conversation = {}
             conversation["id"] = video_id
+            person_id, *_= video_id.split('_') 
+            if not args.no_image:
+                conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', video_id + '.tar')
             conversation["conversations"] = []
             for action in episode:
                 conversation["conversations"].append({
                     "from": "human",
-                    "value": action["narration"]
+                    "value": action["narration"],
+                    "image": "frame" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
                 })
             print(len(conversation["conversations"]))
             conversations.append(conversation)
