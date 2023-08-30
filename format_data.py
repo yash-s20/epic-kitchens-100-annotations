@@ -33,6 +33,7 @@ if __name__ == "__main__":
     parser.add_argument('--json-template-file', type=str, default='epic-kitchens.json', help='json template file to use for making prompts')
     parser.add_argument('--out-json-file', type=str, required=True, help='json file to save prompts to')
     args = parser.parse_args()
+    random.seed(args.seed)
     pp = pprint.PrettyPrinter(indent=4)
     df = csv.reader(open(args.csv_file, 'r'))
     video_jsons = {}
@@ -95,6 +96,7 @@ if __name__ == "__main__":
             start_timestamp = min([action["timestamp"] for action in data])
             end_timestamp = max([action["timestamp"] for action in data])
             # print(start_timestamp, end_timestamp)
+            idx = 0
             for i in range(len(data)//args.max_actions + 1):
                 filtered_data = data[i*args.max_actions:(i+1)*args.max_actions]
                 if len(filtered_data) < args.min_actions:
@@ -102,14 +104,15 @@ if __name__ == "__main__":
                 _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
                 if not _data:
                     continue
-                fil_video_jsons[episode + f"__{i}"] = filtered_data
+                fil_video_jsons[episode + f"__{idx}"] = filtered_data
+                idx += 1
             # can use entire episode
             x += len(filtered_data)
         print(x)
     if args.start_step <= 2:
-        json.dump(fil_video_jsons, open(f"{args.csv_file[:-4]}_filter.json", 'w'))
+        json.dump(fil_video_jsons, open(f"{args.csv_file[:-4]}_filter.json", 'w'), indent=4)
         print("done!")
-    pp.pprint(f"Total episodes - {len(fil_video_jsons)}")
+    print(f"Total episodes - {len(fil_video_jsons)}")
     print("Extracting screenshots", end="...")
     if args.start_step > 3:
         print("Skipping extract screenshots")
@@ -117,6 +120,10 @@ if __name__ == "__main__":
         exit()
     else:
         template = json.load(open(args.json_template_file, 'r'))
+        # template already has examples
+        # examples = template["examples"]
+        # for video_id, episode in examples:
+            
         conversations = template["prompts"]
         i = 0
         for video_id, episode in fil_video_jsons.items():
@@ -127,15 +134,16 @@ if __name__ == "__main__":
             conversation["id"] = video_id
             person_id, *_= video_id.split('_') 
             if not args.no_image:
-                conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', video_id + '.tar')
+                v_id, *_ = video_id.split('__')
+                conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', v_id + '.tar')
             conversation["conversations"] = []
             for action in episode:
                 conversation["conversations"].append({
                     "from": "human",
                     "value": action["narration"],
-                    "image": "frame" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
+                    "image": "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
                 })
-            print(len(conversation["conversations"]))
+            # print(len(conversation["conversations"]))
             conversations.append(conversation)
         # print(template)
         json.dump(template, open(args.out_json_file, 'w'), indent=4)
