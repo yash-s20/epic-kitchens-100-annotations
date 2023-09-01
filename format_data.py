@@ -139,12 +139,18 @@ if __name__ == "__main__":
                 v_id, *_ = video_id.split('__')
                 conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', v_id + '.tar')
             conversation["conversations"] = []
+            action_list = ""
+            action_image_pairs = []
             for action in episode:
-                conversation["conversations"].append({
+                image = "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
+                action_list += action["narration"] + '\n'
+                action_image_pairs.append((action["narration"],image))
+            action_list = action_list[:-2]
+            conversation["conversations"].append({
                     "from": "human",
-                    "value": action["narration"],
-                    "image": "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
+                    "value": action_list
                 })
+            json.dump(action_image_pairs, open(os.path.join(args.out_image_dir, video_id + '.json'), 'w'))
             # print(len(conversation["conversations"]))
             conversations.append(conversation)
         # print(template)
