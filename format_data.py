@@ -92,7 +92,7 @@ if __name__ == "__main__":
         x = 0
         fil_video_jsons = {}
         for episode, data in video_jsons.items():
-            data.sort(lambda x: x["picked_frame"])
+            data.sort(key = lambda x: x["picked_frame"])
         for episode, data in video_jsons.items():
             # print(episode)
             start_timestamp = min([action["timestamp"] for action in data])
