@@ -150,9 +150,9 @@ if __name__ == "__main__":
                     "from": "human",
                     "value": action_list
                 })
-            json.dump(action_image_pairs, open(os.path.join(args.out_image_dir, video_id + '.json'), 'w'))
             # print(len(conversation["conversations"]))
             conversations.append(conversation)
         # print(template)
+        json.dump(action_image_pairs, open(args.out_json_file[:-5] + '_imgs.json', 'w'), indent=4)
         json.dump(template, open(args.out_json_file, 'w'), indent=4)
         print("done!")
