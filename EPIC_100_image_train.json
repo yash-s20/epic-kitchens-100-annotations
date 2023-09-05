@@ -1,8 +1,8 @@
 {
     "header": "You are a vision-language model watching a human wash dishes.\nYou are given annotations of what actions are being done.\nYour task is to identify the state of the environment describing any and all relevant objects before each action is performed\nAdd unique identifiers to each object, and add any missing state-action annotations that make logical sense.\nIf a type of object repeats, it might be a different object. e.g. spoon_1, spoon_2, etc.",
     "example": {
-        "conversations": [
-            [
+        "conversations": {
+            "P04_101": [
                 {
                     "from": "human",
                     "value": "pick up mug"
@@ -76,7 +76,7 @@
                     "value": "[state 9]\non(`mug_1`, `kitchentop_1`)\n[action 9] end"
                 }
             ],
-            [
+            "P07_04": [
                 {
                     "from": "human",
                     "value": "move from near-sink to sink"
@@ -286,12 +286,12 @@
                     "value": "[state 26]\nat(`dishrack_1`)\n[action 26]\nplace plate_1 on dishrack_1"
                 }
             ]
-        ]
+        }
     },
     "prompts": [
         {
             "id": "P01_01__0",
-            "tar_path": "test/P01/rgb_frames/P01_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -547,7 +547,7 @@
         },
         {
             "id": "P01_02__0",
-            "tar_path": "test/P01/rgb_frames/P01_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -803,7 +803,7 @@
         },
         {
             "id": "P01_02__1",
-            "tar_path": "test/P01/rgb_frames/P01_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1049,7 +1049,7 @@
         },
         {
             "id": "P01_04__0",
-            "tar_path": "test/P01/rgb_frames/P01_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1110,7 +1110,7 @@
         },
         {
             "id": "P01_05__0",
-            "tar_path": "test/P01/rgb_frames/P01_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1346,7 +1346,7 @@
         },
         {
             "id": "P01_06__0",
-            "tar_path": "test/P01/rgb_frames/P01_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1602,7 +1602,7 @@
         },
         {
             "id": "P01_06__1",
-            "tar_path": "test/P01/rgb_frames/P01_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1828,7 +1828,7 @@
         },
         {
             "id": "P01_08__0",
-            "tar_path": "test/P01/rgb_frames/P01_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -1909,7 +1909,7 @@
         },
         {
             "id": "P01_09__0",
-            "tar_path": "test/P01/rgb_frames/P01_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -2165,7 +2165,7 @@
         },
         {
             "id": "P01_09__1",
-            "tar_path": "test/P01/rgb_frames/P01_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -2421,7 +2421,7 @@
         },
         {
             "id": "P01_09__2",
-            "tar_path": "test/P01/rgb_frames/P01_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -2677,7 +2677,7 @@
         },
         {
             "id": "P01_09__3",
-            "tar_path": "test/P01/rgb_frames/P01_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -2893,7 +2893,7 @@
         },
         {
             "id": "P01_102__0",
-            "tar_path": "test/P01/rgb_frames/P01_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -3149,7 +3149,7 @@
         },
         {
             "id": "P01_102__1",
-            "tar_path": "test/P01/rgb_frames/P01_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -3325,7 +3325,7 @@
         },
         {
             "id": "P01_104__0",
-            "tar_path": "test/P01/rgb_frames/P01_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -3581,7 +3581,7 @@
         },
         {
             "id": "P01_105__0",
-            "tar_path": "test/P01/rgb_frames/P01_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -3837,7 +3837,7 @@
         },
         {
             "id": "P01_106__0",
-            "tar_path": "test/P01/rgb_frames/P01_106.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_106.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -4093,7 +4093,7 @@
         },
         {
             "id": "P01_106__1",
-            "tar_path": "test/P01/rgb_frames/P01_106.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_106.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -4214,7 +4214,7 @@
         },
         {
             "id": "P01_109__0",
-            "tar_path": "test/P01/rgb_frames/P01_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -4470,7 +4470,7 @@
         },
         {
             "id": "P01_109__1",
-            "tar_path": "test/P01/rgb_frames/P01_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -4726,7 +4726,7 @@
         },
         {
             "id": "P01_17__0",
-            "tar_path": "test/P01/rgb_frames/P01_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -4982,7 +4982,7 @@
         },
         {
             "id": "P01_17__1",
-            "tar_path": "test/P01/rgb_frames/P01_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -5238,7 +5238,7 @@
         },
         {
             "id": "P01_18__0",
-            "tar_path": "test/P01/rgb_frames/P01_18.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_18.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -5494,7 +5494,7 @@
         },
         {
             "id": "P01_18__1",
-            "tar_path": "test/P01/rgb_frames/P01_18.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_18.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -5750,7 +5750,7 @@
         },
         {
             "id": "P01_19__0",
-            "tar_path": "test/P01/rgb_frames/P01_19.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_19.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -6006,7 +6006,7 @@
         },
         {
             "id": "P01_19__1",
-            "tar_path": "test/P01/rgb_frames/P01_19.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P01/rgb_frames/P01_19.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -6252,7 +6252,7 @@
         },
         {
             "id": "P02_02__0",
-            "tar_path": "test/P02/rgb_frames/P02_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -6508,7 +6508,7 @@
         },
         {
             "id": "P02_02__1",
-            "tar_path": "test/P02/rgb_frames/P02_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -6604,7 +6604,7 @@
         },
         {
             "id": "P02_04__0",
-            "tar_path": "test/P02/rgb_frames/P02_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -6860,7 +6860,7 @@
         },
         {
             "id": "P02_04__1",
-            "tar_path": "test/P02/rgb_frames/P02_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -7116,7 +7116,7 @@
         },
         {
             "id": "P02_04__2",
-            "tar_path": "test/P02/rgb_frames/P02_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -7167,7 +7167,7 @@
         },
         {
             "id": "P02_06__0",
-            "tar_path": "test/P02/rgb_frames/P02_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -7423,7 +7423,7 @@
         },
         {
             "id": "P02_06__1",
-            "tar_path": "test/P02/rgb_frames/P02_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -7679,7 +7679,7 @@
         },
         {
             "id": "P02_06__2",
-            "tar_path": "test/P02/rgb_frames/P02_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -7935,7 +7935,7 @@
         },
         {
             "id": "P02_09__0",
-            "tar_path": "test/P02/rgb_frames/P02_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -8191,7 +8191,7 @@
         },
         {
             "id": "P02_09__1",
-            "tar_path": "test/P02/rgb_frames/P02_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -8447,7 +8447,7 @@
         },
         {
             "id": "P02_101__0",
-            "tar_path": "test/P02/rgb_frames/P02_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -8583,7 +8583,7 @@
         },
         {
             "id": "P02_123__0",
-            "tar_path": "test/P02/rgb_frames/P02_123.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_123.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -8839,7 +8839,7 @@
         },
         {
             "id": "P02_129__0",
-            "tar_path": "test/P02/rgb_frames/P02_129.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P02/rgb_frames/P02_129.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9095,7 +9095,7 @@
         },
         {
             "id": "P03_02__0",
-            "tar_path": "test/P03/rgb_frames/P03_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9166,7 +9166,7 @@
         },
         {
             "id": "P03_04__0",
-            "tar_path": "test/P03/rgb_frames/P03_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9422,7 +9422,7 @@
         },
         {
             "id": "P03_04__1",
-            "tar_path": "test/P03/rgb_frames/P03_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9473,7 +9473,7 @@
         },
         {
             "id": "P03_09__0",
-            "tar_path": "test/P03/rgb_frames/P03_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9729,7 +9729,7 @@
         },
         {
             "id": "P03_09__1",
-            "tar_path": "test/P03/rgb_frames/P03_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -9915,7 +9915,7 @@
         },
         {
             "id": "P03_101__0",
-            "tar_path": "test/P03/rgb_frames/P03_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -10171,7 +10171,7 @@
         },
         {
             "id": "P03_101__1",
-            "tar_path": "test/P03/rgb_frames/P03_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -10382,7 +10382,7 @@
         },
         {
             "id": "P03_109__0",
-            "tar_path": "test/P03/rgb_frames/P03_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -10638,7 +10638,7 @@
         },
         {
             "id": "P03_109__1",
-            "tar_path": "test/P03/rgb_frames/P03_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -10894,7 +10894,7 @@
         },
         {
             "id": "P03_109__2",
-            "tar_path": "test/P03/rgb_frames/P03_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -11150,7 +11150,7 @@
         },
         {
             "id": "P03_109__3",
-            "tar_path": "test/P03/rgb_frames/P03_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -11406,7 +11406,7 @@
         },
         {
             "id": "P03_117__0",
-            "tar_path": "test/P03/rgb_frames/P03_117.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_117.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -11662,7 +11662,7 @@
         },
         {
             "id": "P03_117__1",
-            "tar_path": "test/P03/rgb_frames/P03_117.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_117.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -11918,7 +11918,7 @@
         },
         {
             "id": "P03_119__0",
-            "tar_path": "test/P03/rgb_frames/P03_119.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_119.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -12174,7 +12174,7 @@
         },
         {
             "id": "P03_119__1",
-            "tar_path": "test/P03/rgb_frames/P03_119.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_119.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -12430,7 +12430,7 @@
         },
         {
             "id": "P03_119__2",
-            "tar_path": "test/P03/rgb_frames/P03_119.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_119.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -12581,7 +12581,7 @@
         },
         {
             "id": "P03_19__0",
-            "tar_path": "test/P03/rgb_frames/P03_19.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_19.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -12837,7 +12837,7 @@
         },
         {
             "id": "P03_19__1",
-            "tar_path": "test/P03/rgb_frames/P03_19.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_19.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -12963,7 +12963,7 @@
         },
         {
             "id": "P03_20__0",
-            "tar_path": "test/P03/rgb_frames/P03_20.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P03/rgb_frames/P03_20.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -13124,7 +13124,7 @@
         },
         {
             "id": "P04_02__0",
-            "tar_path": "test/P04/rgb_frames/P04_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -13380,7 +13380,7 @@
         },
         {
             "id": "P04_03__0",
-            "tar_path": "test/P04/rgb_frames/P04_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -13636,7 +13636,7 @@
         },
         {
             "id": "P04_04__0",
-            "tar_path": "test/P04/rgb_frames/P04_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -13852,7 +13852,7 @@
         },
         {
             "id": "P04_05__0",
-            "tar_path": "test/P04/rgb_frames/P04_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14048,7 +14048,7 @@
         },
         {
             "id": "P04_06__0",
-            "tar_path": "test/P04/rgb_frames/P04_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14149,7 +14149,7 @@
         },
         {
             "id": "P04_09__0",
-            "tar_path": "test/P04/rgb_frames/P04_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14245,7 +14245,7 @@
         },
         {
             "id": "P04_101__0",
-            "tar_path": "test/P04/rgb_frames/P04_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14501,7 +14501,7 @@
         },
         {
             "id": "P04_109__0",
-            "tar_path": "test/P04/rgb_frames/P04_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14757,7 +14757,7 @@
         },
         {
             "id": "P04_10__0",
-            "tar_path": "test/P04/rgb_frames/P04_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -14833,7 +14833,7 @@
         },
         {
             "id": "P04_113__0",
-            "tar_path": "test/P04/rgb_frames/P04_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15089,7 +15089,7 @@
         },
         {
             "id": "P04_121__0",
-            "tar_path": "test/P04/rgb_frames/P04_121.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_121.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15345,7 +15345,7 @@
         },
         {
             "id": "P04_121__1",
-            "tar_path": "test/P04/rgb_frames/P04_121.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_121.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15601,7 +15601,7 @@
         },
         {
             "id": "P04_121__2",
-            "tar_path": "test/P04/rgb_frames/P04_121.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_121.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15857,7 +15857,7 @@
         },
         {
             "id": "P04_17__0",
-            "tar_path": "test/P04/rgb_frames/P04_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15893,7 +15893,7 @@
         },
         {
             "id": "P04_18__0",
-            "tar_path": "test/P04/rgb_frames/P04_18.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_18.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -15959,7 +15959,7 @@
         },
         {
             "id": "P04_23__0",
-            "tar_path": "test/P04/rgb_frames/P04_23.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P04/rgb_frames/P04_23.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16020,7 +16020,7 @@
         },
         {
             "id": "P05_03__0",
-            "tar_path": "test/P05/rgb_frames/P05_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P05/rgb_frames/P05_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16256,7 +16256,7 @@
         },
         {
             "id": "P05_08__0",
-            "tar_path": "test/P05/rgb_frames/P05_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P05/rgb_frames/P05_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16507,7 +16507,7 @@
         },
         {
             "id": "P06_07__0",
-            "tar_path": "test/P06/rgb_frames/P06_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16623,7 +16623,7 @@
         },
         {
             "id": "P06_101__0",
-            "tar_path": "test/P06/rgb_frames/P06_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16879,7 +16879,7 @@
         },
         {
             "id": "P06_101__1",
-            "tar_path": "test/P06/rgb_frames/P06_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -16910,7 +16910,7 @@
         },
         {
             "id": "P06_102__0",
-            "tar_path": "test/P06/rgb_frames/P06_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17076,7 +17076,7 @@
         },
         {
             "id": "P06_103__0",
-            "tar_path": "test/P06/rgb_frames/P06_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17332,7 +17332,7 @@
         },
         {
             "id": "P06_108__0",
-            "tar_path": "test/P06/rgb_frames/P06_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17548,7 +17548,7 @@
         },
         {
             "id": "P06_113__0",
-            "tar_path": "test/P06/rgb_frames/P06_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P06/rgb_frames/P06_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17799,7 +17799,7 @@
         },
         {
             "id": "P07_02__0",
-            "tar_path": "test/P07/rgb_frames/P07_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17860,7 +17860,7 @@
         },
         {
             "id": "P07_03__0",
-            "tar_path": "test/P07/rgb_frames/P07_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -17906,7 +17906,7 @@
         },
         {
             "id": "P07_04__0",
-            "tar_path": "test/P07/rgb_frames/P07_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -18162,7 +18162,7 @@
         },
         {
             "id": "P07_05__0",
-            "tar_path": "test/P07/rgb_frames/P07_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -18328,7 +18328,7 @@
         },
         {
             "id": "P07_06__0",
-            "tar_path": "test/P07/rgb_frames/P07_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -18444,7 +18444,7 @@
         },
         {
             "id": "P07_07__0",
-            "tar_path": "test/P07/rgb_frames/P07_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -18595,7 +18595,7 @@
         },
         {
             "id": "P07_102__0",
-            "tar_path": "test/P07/rgb_frames/P07_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -18841,7 +18841,7 @@
         },
         {
             "id": "P07_10__0",
-            "tar_path": "test/P07/rgb_frames/P07_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19097,7 +19097,7 @@
         },
         {
             "id": "P07_10__1",
-            "tar_path": "test/P07/rgb_frames/P07_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19223,7 +19223,7 @@
         },
         {
             "id": "P07_111__0",
-            "tar_path": "test/P07/rgb_frames/P07_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19369,7 +19369,7 @@
         },
         {
             "id": "P07_115__0",
-            "tar_path": "test/P07/rgb_frames/P07_115.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_115.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19540,7 +19540,7 @@
         },
         {
             "id": "P07_117__0",
-            "tar_path": "test/P07/rgb_frames/P07_117.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_117.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19796,7 +19796,7 @@
         },
         {
             "id": "P07_117__1",
-            "tar_path": "test/P07/rgb_frames/P07_117.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P07/rgb_frames/P07_117.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -19952,7 +19952,7 @@
         },
         {
             "id": "P08_02__0",
-            "tar_path": "test/P08/rgb_frames/P08_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -20003,7 +20003,7 @@
         },
         {
             "id": "P08_05__0",
-            "tar_path": "test/P08/rgb_frames/P08_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -20259,7 +20259,7 @@
         },
         {
             "id": "P08_05__1",
-            "tar_path": "test/P08/rgb_frames/P08_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -20465,7 +20465,7 @@
         },
         {
             "id": "P08_06__0",
-            "tar_path": "test/P08/rgb_frames/P08_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -20721,7 +20721,7 @@
         },
         {
             "id": "P08_20__0",
-            "tar_path": "test/P08/rgb_frames/P08_20.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_20.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -20807,7 +20807,7 @@
         },
         {
             "id": "P08_21__0",
-            "tar_path": "test/P08/rgb_frames/P08_21.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_21.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21063,7 +21063,7 @@
         },
         {
             "id": "P08_23__0",
-            "tar_path": "test/P08/rgb_frames/P08_23.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_23.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21319,7 +21319,7 @@
         },
         {
             "id": "P08_26__0",
-            "tar_path": "test/P08/rgb_frames/P08_26.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_26.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21575,7 +21575,7 @@
         },
         {
             "id": "P08_27__0",
-            "tar_path": "test/P08/rgb_frames/P08_27.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P08/rgb_frames/P08_27.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21671,7 +21671,7 @@
         },
         {
             "id": "P09_03__0",
-            "tar_path": "test/P09/rgb_frames/P09_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P09/rgb_frames/P09_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21827,7 +21827,7 @@
         },
         {
             "id": "P09_05__0",
-            "tar_path": "test/P09/rgb_frames/P09_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P09/rgb_frames/P09_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -21928,7 +21928,7 @@
         },
         {
             "id": "P09_06__0",
-            "tar_path": "test/P09/rgb_frames/P09_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P09/rgb_frames/P09_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -22034,7 +22034,7 @@
         },
         {
             "id": "P09_104__0",
-            "tar_path": "test/P09/rgb_frames/P09_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P09/rgb_frames/P09_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -22115,7 +22115,7 @@
         },
         {
             "id": "P10_01__0",
-            "tar_path": "test/P10/rgb_frames/P10_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P10/rgb_frames/P10_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -22341,7 +22341,7 @@
         },
         {
             "id": "P10_02__0",
-            "tar_path": "test/P10/rgb_frames/P10_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P10/rgb_frames/P10_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -22592,7 +22592,7 @@
         },
         {
             "id": "P10_04__0",
-            "tar_path": "test/P10/rgb_frames/P10_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P10/rgb_frames/P10_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -22848,7 +22848,7 @@
         },
         {
             "id": "P10_04__1",
-            "tar_path": "test/P10/rgb_frames/P10_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P10/rgb_frames/P10_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23104,7 +23104,7 @@
         },
         {
             "id": "P11_01__0",
-            "tar_path": "test/P11/rgb_frames/P11_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23360,7 +23360,7 @@
         },
         {
             "id": "P11_05__0",
-            "tar_path": "test/P11/rgb_frames/P11_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23616,7 +23616,7 @@
         },
         {
             "id": "P11_05__1",
-            "tar_path": "test/P11/rgb_frames/P11_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23872,7 +23872,7 @@
         },
         {
             "id": "P11_07__0",
-            "tar_path": "test/P11/rgb_frames/P11_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23918,7 +23918,7 @@
         },
         {
             "id": "P11_09__0",
-            "tar_path": "test/P11/rgb_frames/P11_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -23969,7 +23969,7 @@
         },
         {
             "id": "P11_103__0",
-            "tar_path": "test/P11/rgb_frames/P11_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24165,7 +24165,7 @@
         },
         {
             "id": "P11_104__0",
-            "tar_path": "test/P11/rgb_frames/P11_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24421,7 +24421,7 @@
         },
         {
             "id": "P11_16__0",
-            "tar_path": "test/P11/rgb_frames/P11_16.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P11/rgb_frames/P11_16.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24587,7 +24587,7 @@
         },
         {
             "id": "P12_01__0",
-            "tar_path": "test/P12/rgb_frames/P12_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24658,7 +24658,7 @@
         },
         {
             "id": "P12_02__0",
-            "tar_path": "test/P12/rgb_frames/P12_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24794,7 +24794,7 @@
         },
         {
             "id": "P12_04__0",
-            "tar_path": "test/P12/rgb_frames/P12_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -24965,7 +24965,7 @@
         },
         {
             "id": "P12_07__0",
-            "tar_path": "test/P12/rgb_frames/P12_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -25051,7 +25051,7 @@
         },
         {
             "id": "P12_101__0",
-            "tar_path": "test/P12/rgb_frames/P12_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -25307,7 +25307,7 @@
         },
         {
             "id": "P12_101__1",
-            "tar_path": "test/P12/rgb_frames/P12_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -25563,7 +25563,7 @@
         },
         {
             "id": "P12_101__2",
-            "tar_path": "test/P12/rgb_frames/P12_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -25714,7 +25714,7 @@
         },
         {
             "id": "P12_103__0",
-            "tar_path": "test/P12/rgb_frames/P12_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -25970,7 +25970,7 @@
         },
         {
             "id": "P12_104__0",
-            "tar_path": "test/P12/rgb_frames/P12_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26226,7 +26226,7 @@
         },
         {
             "id": "P12_104__1",
-            "tar_path": "test/P12/rgb_frames/P12_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26482,7 +26482,7 @@
         },
         {
             "id": "P12_104__2",
-            "tar_path": "test/P12/rgb_frames/P12_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26678,7 +26678,7 @@
         },
         {
             "id": "P12_105__0",
-            "tar_path": "test/P12/rgb_frames/P12_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P12/rgb_frames/P12_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26769,7 +26769,7 @@
         },
         {
             "id": "P13_04__0",
-            "tar_path": "test/P13/rgb_frames/P13_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P13/rgb_frames/P13_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26850,7 +26850,7 @@
         },
         {
             "id": "P13_05__0",
-            "tar_path": "test/P13/rgb_frames/P13_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P13/rgb_frames/P13_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -26886,7 +26886,7 @@
         },
         {
             "id": "P13_08__0",
-            "tar_path": "test/P13/rgb_frames/P13_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P13/rgb_frames/P13_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27142,7 +27142,7 @@
         },
         {
             "id": "P13_08__1",
-            "tar_path": "test/P13/rgb_frames/P13_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P13/rgb_frames/P13_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27268,7 +27268,7 @@
         },
         {
             "id": "P13_09__0",
-            "tar_path": "test/P13/rgb_frames/P13_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P13/rgb_frames/P13_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27404,7 +27404,7 @@
         },
         {
             "id": "P14_04__0",
-            "tar_path": "test/P14/rgb_frames/P14_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P14/rgb_frames/P14_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27500,7 +27500,7 @@
         },
         {
             "id": "P14_07__0",
-            "tar_path": "test/P14/rgb_frames/P14_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P14/rgb_frames/P14_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27566,7 +27566,7 @@
         },
         {
             "id": "P14_09__0",
-            "tar_path": "test/P14/rgb_frames/P14_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P14/rgb_frames/P14_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27717,7 +27717,7 @@
         },
         {
             "id": "P15_02__0",
-            "tar_path": "test/P15/rgb_frames/P15_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P15/rgb_frames/P15_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27798,7 +27798,7 @@
         },
         {
             "id": "P15_03__0",
-            "tar_path": "test/P15/rgb_frames/P15_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P15/rgb_frames/P15_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27904,7 +27904,7 @@
         },
         {
             "id": "P15_07__0",
-            "tar_path": "test/P15/rgb_frames/P15_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P15/rgb_frames/P15_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27935,7 +27935,7 @@
         },
         {
             "id": "P15_09__0",
-            "tar_path": "test/P15/rgb_frames/P15_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P15/rgb_frames/P15_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -27981,7 +27981,7 @@
         },
         {
             "id": "P15_13__0",
-            "tar_path": "test/P15/rgb_frames/P15_13.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P15/rgb_frames/P15_13.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28142,7 +28142,7 @@
         },
         {
             "id": "P16_01__0",
-            "tar_path": "test/P16/rgb_frames/P16_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P16/rgb_frames/P16_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28263,7 +28263,7 @@
         },
         {
             "id": "P16_03__0",
-            "tar_path": "test/P16/rgb_frames/P16_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P16/rgb_frames/P16_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28334,7 +28334,7 @@
         },
         {
             "id": "P17_04__0",
-            "tar_path": "test/P17/rgb_frames/P17_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P17/rgb_frames/P17_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28390,7 +28390,7 @@
         },
         {
             "id": "P19_01__0",
-            "tar_path": "test/P19/rgb_frames/P19_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P19/rgb_frames/P19_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28521,7 +28521,7 @@
         },
         {
             "id": "P19_03__0",
-            "tar_path": "test/P19/rgb_frames/P19_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P19/rgb_frames/P19_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28637,7 +28637,7 @@
         },
         {
             "id": "P19_04__0",
-            "tar_path": "test/P19/rgb_frames/P19_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P19/rgb_frames/P19_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28683,7 +28683,7 @@
         },
         {
             "id": "P20_02__0",
-            "tar_path": "test/P20/rgb_frames/P20_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P20/rgb_frames/P20_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -28939,7 +28939,7 @@
         },
         {
             "id": "P20_02__1",
-            "tar_path": "test/P20/rgb_frames/P20_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P20/rgb_frames/P20_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -29165,7 +29165,7 @@
         },
         {
             "id": "P20_04__0",
-            "tar_path": "test/P20/rgb_frames/P20_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P20/rgb_frames/P20_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -29421,7 +29421,7 @@
         },
         {
             "id": "P20_04__1",
-            "tar_path": "test/P20/rgb_frames/P20_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P20/rgb_frames/P20_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -29512,7 +29512,7 @@
         },
         {
             "id": "P21_01__0",
-            "tar_path": "test/P21/rgb_frames/P21_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P21/rgb_frames/P21_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -29618,7 +29618,7 @@
         },
         {
             "id": "P22_05__0",
-            "tar_path": "test/P22/rgb_frames/P22_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -29874,7 +29874,7 @@
         },
         {
             "id": "P22_07__0",
-            "tar_path": "test/P22/rgb_frames/P22_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -30130,7 +30130,7 @@
         },
         {
             "id": "P22_07__1",
-            "tar_path": "test/P22/rgb_frames/P22_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -30386,7 +30386,7 @@
         },
         {
             "id": "P22_07__2",
-            "tar_path": "test/P22/rgb_frames/P22_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -30642,7 +30642,7 @@
         },
         {
             "id": "P22_07__3",
-            "tar_path": "test/P22/rgb_frames/P22_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -30898,7 +30898,7 @@
         },
         {
             "id": "P22_07__4",
-            "tar_path": "test/P22/rgb_frames/P22_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -31119,7 +31119,7 @@
         },
         {
             "id": "P22_08__0",
-            "tar_path": "test/P22/rgb_frames/P22_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -31375,7 +31375,7 @@
         },
         {
             "id": "P22_08__1",
-            "tar_path": "test/P22/rgb_frames/P22_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -31631,7 +31631,7 @@
         },
         {
             "id": "P22_08__2",
-            "tar_path": "test/P22/rgb_frames/P22_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -31887,7 +31887,7 @@
         },
         {
             "id": "P22_09__0",
-            "tar_path": "test/P22/rgb_frames/P22_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -32143,7 +32143,7 @@
         },
         {
             "id": "P22_102__0",
-            "tar_path": "test/P22/rgb_frames/P22_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -32399,7 +32399,7 @@
         },
         {
             "id": "P22_103__0",
-            "tar_path": "test/P22/rgb_frames/P22_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -32655,7 +32655,7 @@
         },
         {
             "id": "P22_103__1",
-            "tar_path": "test/P22/rgb_frames/P22_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -32911,7 +32911,7 @@
         },
         {
             "id": "P22_109__0",
-            "tar_path": "test/P22/rgb_frames/P22_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -33167,7 +33167,7 @@
         },
         {
             "id": "P22_109__1",
-            "tar_path": "test/P22/rgb_frames/P22_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -33423,7 +33423,7 @@
         },
         {
             "id": "P22_109__2",
-            "tar_path": "test/P22/rgb_frames/P22_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -33679,7 +33679,7 @@
         },
         {
             "id": "P22_109__3",
-            "tar_path": "test/P22/rgb_frames/P22_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -33935,7 +33935,7 @@
         },
         {
             "id": "P22_10__0",
-            "tar_path": "test/P22/rgb_frames/P22_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -34191,7 +34191,7 @@
         },
         {
             "id": "P22_10__1",
-            "tar_path": "test/P22/rgb_frames/P22_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -34447,7 +34447,7 @@
         },
         {
             "id": "P22_10__2",
-            "tar_path": "test/P22/rgb_frames/P22_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -34673,7 +34673,7 @@
         },
         {
             "id": "P22_110__0",
-            "tar_path": "test/P22/rgb_frames/P22_110.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_110.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -34929,7 +34929,7 @@
         },
         {
             "id": "P22_111__0",
-            "tar_path": "test/P22/rgb_frames/P22_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -35185,7 +35185,7 @@
         },
         {
             "id": "P22_111__1",
-            "tar_path": "test/P22/rgb_frames/P22_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -35441,7 +35441,7 @@
         },
         {
             "id": "P22_113__0",
-            "tar_path": "test/P22/rgb_frames/P22_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -35697,7 +35697,7 @@
         },
         {
             "id": "P22_113__1",
-            "tar_path": "test/P22/rgb_frames/P22_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -35953,7 +35953,7 @@
         },
         {
             "id": "P22_12__0",
-            "tar_path": "test/P22/rgb_frames/P22_12.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_12.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -36209,7 +36209,7 @@
         },
         {
             "id": "P22_12__1",
-            "tar_path": "test/P22/rgb_frames/P22_12.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_12.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -36340,7 +36340,7 @@
         },
         {
             "id": "P22_13__0",
-            "tar_path": "test/P22/rgb_frames/P22_13.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_13.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -36596,7 +36596,7 @@
         },
         {
             "id": "P22_14__0",
-            "tar_path": "test/P22/rgb_frames/P22_14.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_14.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -36852,7 +36852,7 @@
         },
         {
             "id": "P22_14__1",
-            "tar_path": "test/P22/rgb_frames/P22_14.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_14.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -37108,7 +37108,7 @@
         },
         {
             "id": "P22_16__0",
-            "tar_path": "test/P22/rgb_frames/P22_16.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_16.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -37364,7 +37364,7 @@
         },
         {
             "id": "P22_17__0",
-            "tar_path": "test/P22/rgb_frames/P22_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -37620,7 +37620,7 @@
         },
         {
             "id": "P22_17__1",
-            "tar_path": "test/P22/rgb_frames/P22_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -37876,7 +37876,7 @@
         },
         {
             "id": "P22_17__2",
-            "tar_path": "test/P22/rgb_frames/P22_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38132,7 +38132,7 @@
         },
         {
             "id": "P22_17__3",
-            "tar_path": "test/P22/rgb_frames/P22_17.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P22/rgb_frames/P22_17.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38273,7 +38273,7 @@
         },
         {
             "id": "P23_01__0",
-            "tar_path": "test/P23/rgb_frames/P23_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38304,7 +38304,7 @@
         },
         {
             "id": "P23_02__0",
-            "tar_path": "test/P23/rgb_frames/P23_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38560,7 +38560,7 @@
         },
         {
             "id": "P23_02__1",
-            "tar_path": "test/P23/rgb_frames/P23_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38686,7 +38686,7 @@
         },
         {
             "id": "P23_03__0",
-            "tar_path": "test/P23/rgb_frames/P23_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -38802,7 +38802,7 @@
         },
         {
             "id": "P23_04__0",
-            "tar_path": "test/P23/rgb_frames/P23_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -39058,7 +39058,7 @@
         },
         {
             "id": "P23_04__1",
-            "tar_path": "test/P23/rgb_frames/P23_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -39159,7 +39159,7 @@
         },
         {
             "id": "P23_101__0",
-            "tar_path": "test/P23/rgb_frames/P23_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -39415,7 +39415,7 @@
         },
         {
             "id": "P23_101__1",
-            "tar_path": "test/P23/rgb_frames/P23_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -39671,7 +39671,7 @@
         },
         {
             "id": "P23_101__2",
-            "tar_path": "test/P23/rgb_frames/P23_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -39927,7 +39927,7 @@
         },
         {
             "id": "P23_102__0",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -40183,7 +40183,7 @@
         },
         {
             "id": "P23_102__1",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -40439,7 +40439,7 @@
         },
         {
             "id": "P23_102__2",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -40695,7 +40695,7 @@
         },
         {
             "id": "P23_102__3",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -40951,7 +40951,7 @@
         },
         {
             "id": "P23_102__4",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -41207,7 +41207,7 @@
         },
         {
             "id": "P23_102__5",
-            "tar_path": "test/P23/rgb_frames/P23_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P23/rgb_frames/P23_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -41448,7 +41448,7 @@
         },
         {
             "id": "P24_01__0",
-            "tar_path": "test/P24/rgb_frames/P24_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -41574,7 +41574,7 @@
         },
         {
             "id": "P24_03__0",
-            "tar_path": "test/P24/rgb_frames/P24_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -41830,7 +41830,7 @@
         },
         {
             "id": "P24_04__0",
-            "tar_path": "test/P24/rgb_frames/P24_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -42081,7 +42081,7 @@
         },
         {
             "id": "P24_05__0",
-            "tar_path": "test/P24/rgb_frames/P24_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -42337,7 +42337,7 @@
         },
         {
             "id": "P24_06__0",
-            "tar_path": "test/P24/rgb_frames/P24_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -42593,7 +42593,7 @@
         },
         {
             "id": "P24_06__1",
-            "tar_path": "test/P24/rgb_frames/P24_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -42739,7 +42739,7 @@
         },
         {
             "id": "P24_07__0",
-            "tar_path": "test/P24/rgb_frames/P24_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -42985,7 +42985,7 @@
         },
         {
             "id": "P24_08__0",
-            "tar_path": "test/P24/rgb_frames/P24_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P24/rgb_frames/P24_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43146,7 +43146,7 @@
         },
         {
             "id": "P25_02__0",
-            "tar_path": "test/P25/rgb_frames/P25_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43277,7 +43277,7 @@
         },
         {
             "id": "P25_03__0",
-            "tar_path": "test/P25/rgb_frames/P25_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43338,7 +43338,7 @@
         },
         {
             "id": "P25_04__0",
-            "tar_path": "test/P25/rgb_frames/P25_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43514,7 +43514,7 @@
         },
         {
             "id": "P25_05__0",
-            "tar_path": "test/P25/rgb_frames/P25_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43770,7 +43770,7 @@
         },
         {
             "id": "P25_05__1",
-            "tar_path": "test/P25/rgb_frames/P25_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -43921,7 +43921,7 @@
         },
         {
             "id": "P25_09__0",
-            "tar_path": "test/P25/rgb_frames/P25_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -44167,7 +44167,7 @@
         },
         {
             "id": "P25_102__0",
-            "tar_path": "test/P25/rgb_frames/P25_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -44423,7 +44423,7 @@
         },
         {
             "id": "P25_102__1",
-            "tar_path": "test/P25/rgb_frames/P25_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -44539,7 +44539,7 @@
         },
         {
             "id": "P25_103__0",
-            "tar_path": "test/P25/rgb_frames/P25_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -44750,7 +44750,7 @@
         },
         {
             "id": "P25_104__0",
-            "tar_path": "test/P25/rgb_frames/P25_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -45006,7 +45006,7 @@
         },
         {
             "id": "P25_104__1",
-            "tar_path": "test/P25/rgb_frames/P25_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -45262,7 +45262,7 @@
         },
         {
             "id": "P25_106__0",
-            "tar_path": "test/P25/rgb_frames/P25_106.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_106.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -45518,7 +45518,7 @@
         },
         {
             "id": "P25_107__0",
-            "tar_path": "test/P25/rgb_frames/P25_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -45774,7 +45774,7 @@
         },
         {
             "id": "P25_107__1",
-            "tar_path": "test/P25/rgb_frames/P25_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -45950,7 +45950,7 @@
         },
         {
             "id": "P25_11__0",
-            "tar_path": "test/P25/rgb_frames/P25_11.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P25/rgb_frames/P25_11.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -46051,7 +46051,7 @@
         },
         {
             "id": "P26_103__0",
-            "tar_path": "test/P26/rgb_frames/P26_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P26/rgb_frames/P26_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -46307,7 +46307,7 @@
         },
         {
             "id": "P26_116__0",
-            "tar_path": "test/P26/rgb_frames/P26_116.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P26/rgb_frames/P26_116.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -46438,7 +46438,7 @@
         },
         {
             "id": "P26_124__0",
-            "tar_path": "test/P26/rgb_frames/P26_124.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P26/rgb_frames/P26_124.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -46694,7 +46694,7 @@
         },
         {
             "id": "P26_18__0",
-            "tar_path": "test/P26/rgb_frames/P26_18.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P26/rgb_frames/P26_18.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -46905,7 +46905,7 @@
         },
         {
             "id": "P26_19__0",
-            "tar_path": "test/P26/rgb_frames/P26_19.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P26/rgb_frames/P26_19.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47161,7 +47161,7 @@
         },
         {
             "id": "P27_01__0",
-            "tar_path": "test/P27/rgb_frames/P27_01.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_01.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47317,7 +47317,7 @@
         },
         {
             "id": "P27_02__0",
-            "tar_path": "test/P27/rgb_frames/P27_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47368,7 +47368,7 @@
         },
         {
             "id": "P27_03__0",
-            "tar_path": "test/P27/rgb_frames/P27_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47439,7 +47439,7 @@
         },
         {
             "id": "P27_04__0",
-            "tar_path": "test/P27/rgb_frames/P27_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47635,7 +47635,7 @@
         },
         {
             "id": "P27_06__0",
-            "tar_path": "test/P27/rgb_frames/P27_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -47891,7 +47891,7 @@
         },
         {
             "id": "P27_07__0",
-            "tar_path": "test/P27/rgb_frames/P27_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -48147,7 +48147,7 @@
         },
         {
             "id": "P27_07__1",
-            "tar_path": "test/P27/rgb_frames/P27_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -48248,7 +48248,7 @@
         },
         {
             "id": "P27_101__0",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -48504,7 +48504,7 @@
         },
         {
             "id": "P27_101__1",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -48760,7 +48760,7 @@
         },
         {
             "id": "P27_101__2",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -49016,7 +49016,7 @@
         },
         {
             "id": "P27_101__3",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -49272,7 +49272,7 @@
         },
         {
             "id": "P27_101__4",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -49528,7 +49528,7 @@
         },
         {
             "id": "P27_101__5",
-            "tar_path": "test/P27/rgb_frames/P27_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -49694,7 +49694,7 @@
         },
         {
             "id": "P27_103__0",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -49950,7 +49950,7 @@
         },
         {
             "id": "P27_103__1",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -50206,7 +50206,7 @@
         },
         {
             "id": "P27_103__2",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -50462,7 +50462,7 @@
         },
         {
             "id": "P27_103__3",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -50718,7 +50718,7 @@
         },
         {
             "id": "P27_103__4",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -50974,7 +50974,7 @@
         },
         {
             "id": "P27_103__5",
-            "tar_path": "test/P27/rgb_frames/P27_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -51105,7 +51105,7 @@
         },
         {
             "id": "P27_104__0",
-            "tar_path": "test/P27/rgb_frames/P27_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -51361,7 +51361,7 @@
         },
         {
             "id": "P27_104__1",
-            "tar_path": "test/P27/rgb_frames/P27_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -51617,7 +51617,7 @@
         },
         {
             "id": "P27_105__0",
-            "tar_path": "test/P27/rgb_frames/P27_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -51873,7 +51873,7 @@
         },
         {
             "id": "P27_105__1",
-            "tar_path": "test/P27/rgb_frames/P27_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P27/rgb_frames/P27_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -52104,7 +52104,7 @@
         },
         {
             "id": "P28_02__0",
-            "tar_path": "test/P28/rgb_frames/P28_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -52360,7 +52360,7 @@
         },
         {
             "id": "P28_02__1",
-            "tar_path": "test/P28/rgb_frames/P28_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -52616,7 +52616,7 @@
         },
         {
             "id": "P28_02__2",
-            "tar_path": "test/P28/rgb_frames/P28_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -52722,7 +52722,7 @@
         },
         {
             "id": "P28_06__0",
-            "tar_path": "test/P28/rgb_frames/P28_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -52888,7 +52888,7 @@
         },
         {
             "id": "P28_08__0",
-            "tar_path": "test/P28/rgb_frames/P28_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53144,7 +53144,7 @@
         },
         {
             "id": "P28_08__1",
-            "tar_path": "test/P28/rgb_frames/P28_08.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_08.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53285,7 +53285,7 @@
         },
         {
             "id": "P28_101__0",
-            "tar_path": "test/P28/rgb_frames/P28_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53481,7 +53481,7 @@
         },
         {
             "id": "P28_102__0",
-            "tar_path": "test/P28/rgb_frames/P28_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_102.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53597,7 +53597,7 @@
         },
         {
             "id": "P28_103__0",
-            "tar_path": "test/P28/rgb_frames/P28_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53853,7 +53853,7 @@
         },
         {
             "id": "P28_103__1",
-            "tar_path": "test/P28/rgb_frames/P28_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -53969,7 +53969,7 @@
         },
         {
             "id": "P28_104__0",
-            "tar_path": "test/P28/rgb_frames/P28_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -54225,7 +54225,7 @@
         },
         {
             "id": "P28_104__1",
-            "tar_path": "test/P28/rgb_frames/P28_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -54396,7 +54396,7 @@
         },
         {
             "id": "P28_105__0",
-            "tar_path": "test/P28/rgb_frames/P28_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -54652,7 +54652,7 @@
         },
         {
             "id": "P28_111__0",
-            "tar_path": "test/P28/rgb_frames/P28_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -54908,7 +54908,7 @@
         },
         {
             "id": "P28_111__1",
-            "tar_path": "test/P28/rgb_frames/P28_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -55164,7 +55164,7 @@
         },
         {
             "id": "P28_111__2",
-            "tar_path": "test/P28/rgb_frames/P28_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -55420,7 +55420,7 @@
         },
         {
             "id": "P28_111__3",
-            "tar_path": "test/P28/rgb_frames/P28_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -55501,7 +55501,7 @@
         },
         {
             "id": "P28_112__0",
-            "tar_path": "test/P28/rgb_frames/P28_112.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_112.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -55757,7 +55757,7 @@
         },
         {
             "id": "P28_14__0",
-            "tar_path": "test/P28/rgb_frames/P28_14.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P28/rgb_frames/P28_14.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -55928,7 +55928,7 @@
         },
         {
             "id": "P29_03__0",
-            "tar_path": "test/P29/rgb_frames/P29_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P29/rgb_frames/P29_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -56184,7 +56184,7 @@
         },
         {
             "id": "P29_03__1",
-            "tar_path": "test/P29/rgb_frames/P29_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P29/rgb_frames/P29_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -56440,7 +56440,7 @@
         },
         {
             "id": "P29_03__2",
-            "tar_path": "test/P29/rgb_frames/P29_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P29/rgb_frames/P29_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -56696,7 +56696,7 @@
         },
         {
             "id": "P29_03__3",
-            "tar_path": "test/P29/rgb_frames/P29_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P29/rgb_frames/P29_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -56952,7 +56952,7 @@
         },
         {
             "id": "P29_03__4",
-            "tar_path": "test/P29/rgb_frames/P29_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P29/rgb_frames/P29_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -57208,7 +57208,7 @@
         },
         {
             "id": "P30_03__0",
-            "tar_path": "test/P30/rgb_frames/P30_03.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_03.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -57414,7 +57414,7 @@
         },
         {
             "id": "P30_04__0",
-            "tar_path": "test/P30/rgb_frames/P30_04.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_04.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -57670,7 +57670,7 @@
         },
         {
             "id": "P30_05__0",
-            "tar_path": "test/P30/rgb_frames/P30_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -57926,7 +57926,7 @@
         },
         {
             "id": "P30_05__1",
-            "tar_path": "test/P30/rgb_frames/P30_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -58182,7 +58182,7 @@
         },
         {
             "id": "P30_05__2",
-            "tar_path": "test/P30/rgb_frames/P30_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -58433,7 +58433,7 @@
         },
         {
             "id": "P30_06__0",
-            "tar_path": "test/P30/rgb_frames/P30_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -58689,7 +58689,7 @@
         },
         {
             "id": "P30_06__1",
-            "tar_path": "test/P30/rgb_frames/P30_06.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_06.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -58875,7 +58875,7 @@
         },
         {
             "id": "P30_101__0",
-            "tar_path": "test/P30/rgb_frames/P30_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -59131,7 +59131,7 @@
         },
         {
             "id": "P30_104__0",
-            "tar_path": "test/P30/rgb_frames/P30_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -59287,7 +59287,7 @@
         },
         {
             "id": "P30_107__0",
-            "tar_path": "test/P30/rgb_frames/P30_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -59543,7 +59543,7 @@
         },
         {
             "id": "P30_107__1",
-            "tar_path": "test/P30/rgb_frames/P30_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -59799,7 +59799,7 @@
         },
         {
             "id": "P30_107__2",
-            "tar_path": "test/P30/rgb_frames/P30_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -60055,7 +60055,7 @@
         },
         {
             "id": "P30_107__3",
-            "tar_path": "test/P30/rgb_frames/P30_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -60311,7 +60311,7 @@
         },
         {
             "id": "P30_107__4",
-            "tar_path": "test/P30/rgb_frames/P30_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -60567,7 +60567,7 @@
         },
         {
             "id": "P30_108__0",
-            "tar_path": "test/P30/rgb_frames/P30_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -60823,7 +60823,7 @@
         },
         {
             "id": "P30_10__0",
-            "tar_path": "test/P30/rgb_frames/P30_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -61079,7 +61079,7 @@
         },
         {
             "id": "P30_10__1",
-            "tar_path": "test/P30/rgb_frames/P30_10.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_10.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -61310,7 +61310,7 @@
         },
         {
             "id": "P30_111__0",
-            "tar_path": "test/P30/rgb_frames/P30_111.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_111.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -61566,7 +61566,7 @@
         },
         {
             "id": "P30_113__0",
-            "tar_path": "test/P30/rgb_frames/P30_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -61822,7 +61822,7 @@
         },
         {
             "id": "P30_113__1",
-            "tar_path": "test/P30/rgb_frames/P30_113.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_113.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -61973,7 +61973,7 @@
         },
         {
             "id": "P30_11__0",
-            "tar_path": "test/P30/rgb_frames/P30_11.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_11.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62229,7 +62229,7 @@
         },
         {
             "id": "P30_11__1",
-            "tar_path": "test/P30/rgb_frames/P30_11.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P30/rgb_frames/P30_11.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62375,7 +62375,7 @@
         },
         {
             "id": "P31_02__0",
-            "tar_path": "test/P31/rgb_frames/P31_02.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P31/rgb_frames/P31_02.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62416,7 +62416,7 @@
         },
         {
             "id": "P31_05__0",
-            "tar_path": "test/P31/rgb_frames/P31_05.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P31/rgb_frames/P31_05.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62467,7 +62467,7 @@
         },
         {
             "id": "P31_07__0",
-            "tar_path": "test/P31/rgb_frames/P31_07.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P31/rgb_frames/P31_07.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62588,7 +62588,7 @@
         },
         {
             "id": "P31_09__0",
-            "tar_path": "test/P31/rgb_frames/P31_09.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P31/rgb_frames/P31_09.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62684,7 +62684,7 @@
         },
         {
             "id": "P31_14__0",
-            "tar_path": "test/P31/rgb_frames/P31_14.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P31/rgb_frames/P31_14.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62755,7 +62755,7 @@
         },
         {
             "id": "P35_101__0",
-            "tar_path": "test/P35/rgb_frames/P35_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -62916,7 +62916,7 @@
         },
         {
             "id": "P35_103__0",
-            "tar_path": "test/P35/rgb_frames/P35_103.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_103.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -63172,7 +63172,7 @@
         },
         {
             "id": "P35_104__0",
-            "tar_path": "test/P35/rgb_frames/P35_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -63428,7 +63428,7 @@
         },
         {
             "id": "P35_104__1",
-            "tar_path": "test/P35/rgb_frames/P35_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -63684,7 +63684,7 @@
         },
         {
             "id": "P35_104__2",
-            "tar_path": "test/P35/rgb_frames/P35_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -63940,7 +63940,7 @@
         },
         {
             "id": "P35_104__3",
-            "tar_path": "test/P35/rgb_frames/P35_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -64196,7 +64196,7 @@
         },
         {
             "id": "P35_104__4",
-            "tar_path": "test/P35/rgb_frames/P35_104.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_104.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -64452,7 +64452,7 @@
         },
         {
             "id": "P35_105__0",
-            "tar_path": "test/P35/rgb_frames/P35_105.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_105.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -64708,7 +64708,7 @@
         },
         {
             "id": "P35_107__0",
-            "tar_path": "test/P35/rgb_frames/P35_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -64964,7 +64964,7 @@
         },
         {
             "id": "P35_107__1",
-            "tar_path": "test/P35/rgb_frames/P35_107.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_107.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -65220,7 +65220,7 @@
         },
         {
             "id": "P35_108__0",
-            "tar_path": "test/P35/rgb_frames/P35_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -65476,7 +65476,7 @@
         },
         {
             "id": "P35_108__1",
-            "tar_path": "test/P35/rgb_frames/P35_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -65732,7 +65732,7 @@
         },
         {
             "id": "P35_108__2",
-            "tar_path": "test/P35/rgb_frames/P35_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -65988,7 +65988,7 @@
         },
         {
             "id": "P35_108__3",
-            "tar_path": "test/P35/rgb_frames/P35_108.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_108.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -66244,7 +66244,7 @@
         },
         {
             "id": "P35_109__0",
-            "tar_path": "test/P35/rgb_frames/P35_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -66500,7 +66500,7 @@
         },
         {
             "id": "P35_109__1",
-            "tar_path": "test/P35/rgb_frames/P35_109.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P35/rgb_frames/P35_109.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -66756,7 +66756,7 @@
         },
         {
             "id": "P37_101__0",
-            "tar_path": "test/P37/rgb_frames/P37_101.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P37/rgb_frames/P37_101.tar",
             "conversations": [
                 {
                     "from": "human",
@@ -67012,7 +67012,7 @@
         },
         {
             "id": "P37_102__0",
-            "tar_path": "test/P37/rgb_frames/P37_102.tar",
+            "tar_path": "/share/portal/ys749/EPIC-KITCHENS/P37/rgb_frames/P37_102.tar",
             "conversations": [
                 {
                     "from": "human",

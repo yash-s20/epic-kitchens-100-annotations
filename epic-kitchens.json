@@ -2,9 +2,8 @@
     "header": "You are a vision-language model watching a human wash dishes.\nYou are given annotations of what actions are being done.\nYour task is to identify the state of the environment describing any and all relevant objects before each action is performed\nAdd unique identifiers to each object, and add any missing state-action annotations that make logical sense.\nIf a type of object repeats, it might be a different object. e.g. spoon_1, spoon_2, etc.",
     "example":
     {
-    "conversations":
-        [
-            [
+        "conversations": {
+            "P04_101": [
             {
                 "from": "human",
                 "value": "pick up mug"
@@ -76,9 +75,8 @@
             {
                 "from": "gpt",
                 "value": "[state 9]\non(`mug_1`, `kitchentop_1`)\n[action 9] end"
-            }
-            ],
-            [
+            }],
+        "P07_04": [
             {
                 "from": "human",
                 "value": "move from near-sink to sink"
@@ -288,7 +286,7 @@
                 "value": "[state 26]\nat(`dishrack_1`)\n[action 26]\nplace plate_1 on dishrack_1"
             }
             ]
-        ]
+        }
     },
     "prompts":
     [
