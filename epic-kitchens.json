@@ -1,294 +1,32 @@
 {
     "header": "You are a vision-language model watching a human wash dishes.\nYou are given annotations of what actions are being done.\nYour task is to identify the state of the environment describing any and all relevant objects before each action is performed\nAdd unique identifiers to each object, and add any missing state-action annotations that make logical sense.\nIf a type of object repeats, it might be a different object. e.g. spoon_1, spoon_2, etc.",
-    "example":
-    {
+    "example": {
         "conversations": {
             "P04_101": [
-            {
-                "from": "human",
-                "value": "pick up mug"
-            },
-            {  
-                "from": "gpt",
-                "value": "[state 1]\nat(`desk_1`); on(`mug_1`, `desk_1`)\n[action 1]\npick up mug_1"
-            },
-            {
-                "from": "human",
-                "value": "move from desk to sink"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 2]\ninhand(`mug_1`); isdirty(`mug_1`)\n[action 2]move from desk_1 to sink_1"
-            },
-            {
-                "from": "human",
-                "value": "turn on tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 3]\nat(`sink_1`);isoff(`tap_1`)\n[action 3]\nturn on tap_1"
-            },
-            {
-                "from": "human",
-                "value": "pick up scrub"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 4]\nison(`tap_1`)\n[action 4]\npick up scrub_1"
-            },
-            {
-                "from": "human",
-                "value": "scrub mug"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 5]\ninhand(`scrub_1`)\n[action 5]\nscrub mug_1"
-            },
-            {
-                "from": "human",
-                "value": "rinse mug till clean"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 6]\nsoapy(`mug_1`)\n[action 6]\nrinse mug_1 till clean"
-            },
-            {
-                "from": "human",
-                "value": "turn off tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 7]\nclean(`mug_1`)\n[action 7]\nturn off tap_1"
-            },
-            {
-                "from": "human",
-                "value": "place mug on kitchentop"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 8]\nat(`kitchentop_1`)\n[action 8]\nplace mug_1 on kitchentop_1"
-            },
-            {
-                "from": "human",
-                "value": "end"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 9]\non(`mug_1`, `kitchentop_1`)\n[action 9] end"
-            }],
-        "P07_04": [
-            {
-                "from": "human",
-                "value": "move from near-sink to sink"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 1]\ninhand(`fork_1`);inhand(`fork_2`);inhand(`fork_3`);at(`near-sink_1`)\n[action 1]\nmove from near-sink_1 to sink_1"
-            },
-            {
-                "from": "human",
-                "value": "pick up scrub"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 2]\nat(`sink_1`)\n[action 2]\npick up scrub_1"
-            },
-            {
-                "from": "human",
-                "value": "make scrub foamy"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 3]\ninhand(`scrub_1`)\n[action 3]\npour soap on scrub_1"
-            },
-            {
-                "from": "human",
-                "value": "scrub fork till soapy because fork is dirty"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 4]\nfoamy(`scrub_1`);isdirty(`fork_1`)\n[action 4]\nscrub fork_1 till soapy"
-            },
-            {
-                "from": "human",
-                "value": "scrub fork till soapy because fork is dirty"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 5]\nsoapy(`fork_1`);isdirty(`fork_2`)\n[action 5]\nscrub fork_2 till soapy"
-            },
-            {
-                "from": "human",
-                "value": "scrub fork till soapy because fork is dirty"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 6]\nsoapy(`fork_2`);isdirty(`fork_3`)\n[action 6]\nscrub fork_3 till soapy"
-            },
-            {
-                "from": "human",
-                "value": "turn on tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 7]\nsoapy(`fork_3`);isoff(`tap_1`)\n[action 7]\nturn on tap_1"
-            },
-            {
-                "from": "human",
-                "value": "rinse fork till clean"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 8]\nison(`tap_1`)\n[action 8]\nrinse fork_1 till clean"
-            },
-            {
-                "from": "human",
-                "value": "rinse fork till clean"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 9]\nisclean(`fork_1`)\n[action 9]\nrinse fork_2 till clean"
-            },
-            {
-                "from": "human",
-                "value": "rinse fork till clean"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 10]\nisclean(`fork_2`)\n[action 10]\nrinse fork_3 till clean"
-            },
-            {
-                "from": "human",
-                "value": "turn off tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 11]\nisclean(`fork_3`)\n[action 11]\nturn off tap_1"
-            },
-            {
-                "from": "human",
-                "value": "move from sink to dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 12]\nisoff(`tap_1`)\n[action 12]\nmove from sink_1 to dishrack_1"
-            },
-            {
-                "from": "human",
-                "value": "place fork on dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 13]\nat(`dishrack_1`)\n[action 13]\nplace fork_1 on dishrack_1"
-            },
-            {
-                "from": "human",
-                "value": "place fork on dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 14]\non(`fork_1`, `dishrack_1`)\n[action 14]\nplace fork_2 on dishrack_1"
-            },
-            {
-                "from": "human",
-                "value": "place fork on dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 15]\non(`fork_2`, `dishrack_1`)\n[action 15]\nplace fork_3 on dishrack_1"
-            },
-            {
-                "from": "human",
-                "value": "move from dishrack to near-sink"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 16]\non(`fork_3`, `dishrack_1`)\n[action 16]\nmove from dishrack_1 to near-sink_1"
-            },
-            {
-                "from": "human",
-                "value": "pick up plate"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 17]\non(`plate_1`, `near-sink_1`)\n[action 17]pick up plate_1"
-            },
-            {
-                "from": "human",
-                "value": "move from near-sink to sink"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 18]\ninhand(`plate_1`)\n[action 18]\nmove from near-sink_1 to sink_1"
-            },
-            {
-                "from": "human",
-                "value": "turn on tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 19]\nat(`sink_1`)\n[action 19]\nturn on tap_1"
-            },
-            {
-                "from": "human",
-                "value": "pick up scrub"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 20]\nison(`tap_1`);isdirty(`plate_1`)\n[action 20]\npick up scrub_1"
-            },
-            {
-                "from": "human",
-                "value": "make scrub foamy"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 21]\ninhand(`scrub_1`)\n[action 21]\nput soap on scrub_1"
-            },
-            {
-                "from": "human",
-                "value": "scrub plate till soapy because plate is dirty"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 22]\nsoapy(`scrub_1`);isdirty(`plate_1`)\n[action 22]\nscrub plate_1 till soapy"
-            },
-            {
-                "from": "human",
-                "value": "rinse plate till clean"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 23]\nsoapy(`plate_1`);ison(`tap_1`)\n[action 23]\nrinse plate_1 till clean"
-            },
-            {
-                "from": "human",
-                "value": "turn off tap"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 24]\nclean(`plate_1`)\n[action 24]\nturn off tap_1"
-            },
-            {
-                "from": "human",
-                "value": "move from sink to dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 25]\nisoff(`tap_1`)\n[action 25]\nmove from sink_1 to dishrack_1"
-            },
-            {
-                "from": "human",
-                "value": "place plate on dishrack"
-            },
-            {
-                "from": "gpt",
-                "value": "[state 26]\nat(`dishrack_1`)\n[action 26]\nplace plate_1 on dishrack_1"
-            }
+                [
+                    {
+                        "from": "human",
+                        "value": "pick up mug\nmove from desk to sink\nturn on tap\npick up scrub\nscrub mug\nrinse mug till clean\nturn off tap\nplace mug on kitchentop\nend\n"
+                    },
+                    {
+                        "from": "gpt",
+                        "value": "[state 1]\nat(`desk_1`); on(`mug_1`, `desk_1`)\n[action 1]\npick up mug_1\n[state 2]\ninhand(`mug_1`); isdirty(`mug_1`)\n[action 2]move from desk_1 to sink_1\n[state 3]\nat(`sink_1`);isoff(`tap_1`)\n[action 3]\nturn on tap_1\n[state 4]\nison(`tap_1`)\n[action 4]\npick up scrub_1\n[state 5]\ninhand(`scrub_1`)\n[action 5]\nscrub mug_1\n[state 6]\nsoapy(`mug_1`)\n[action 6]\nrinse mug_1 till clean\n[state 7]\nclean(`mug_1`)\n[action 7]\nturn off tap_1\n[state 8]\nat(`kitchentop_1`)\n[action 8]\nplace mug_1 on kitchentop_1\n[state 9]\non(`mug_1`, `kitchentop_1`)\n[action 9] end\n"
+                    }
+                ]
+            ],
+            "P07_04": [
+                [
+                    {
+                        "from": "human",
+                        "value": "move from near-sink to sink\npick up scrub\nmake scrub foamy\nscrub fork till soapy because fork is dirty\nscrub fork till soapy because fork is dirty\nscrub fork till soapy because fork is dirty\nturn on tap\nrinse fork till clean\nrinse fork till clean\nrinse fork till clean\nturn off tap\nmove from sink to dishrack\nplace fork on dishrack\nplace fork on dishrack\nplace fork on dishrack\nmove from dishrack to near-sink\npick up plate\nmove from near-sink to sink\nturn on tap\npick up scrub\nmake scrub foamy\nscrub plate till soapy because plate is dirty\nrinse plate till clean\nturn off tap\nmove from sink to dishrack\nplace plate on dishrack\n"
+                    },
+                    {
+                        "from": "gpt",
+                        "value": "[state 1]\ninhand(`fork_1`);inhand(`fork_2`);inhand(`fork_3`);at(`near-sink_1`)\n[action 1]\nmove from near-sink_1 to sink_1\n[state 2]\nat(`sink_1`)\n[action 2]\npick up scrub_1\n[state 3]\ninhand(`scrub_1`)\n[action 3]\npour soap on scrub_1\n[state 4]\nfoamy(`scrub_1`);isdirty(`fork_1`)\n[action 4]\nscrub fork_1 till soapy\n[state 5]\nsoapy(`fork_1`);isdirty(`fork_2`)\n[action 5]\nscrub fork_2 till soapy\n[state 6]\nsoapy(`fork_2`);isdirty(`fork_3`)\n[action 6]\nscrub fork_3 till soapy\n[state 7]\nsoapy(`fork_3`);isoff(`tap_1`)\n[action 7]\nturn on tap_1\n[state 8]\nison(`tap_1`)\n[action 8]\nrinse fork_1 till clean\n[state 9]\nisclean(`fork_1`)\n[action 9]\nrinse fork_2 till clean\n[state 10]\nisclean(`fork_2`)\n[action 10]\nrinse fork_3 till clean\n[state 11]\nisclean(`fork_3`)\n[action 11]\nturn off tap_1\n[state 12]\nisoff(`tap_1`)\n[action 12]\nmove from sink_1 to dishrack_1\n[state 13]\nat(`dishrack_1`)\n[action 13]\nplace fork_1 on dishrack_1\n[state 14]\non(`fork_1`, `dishrack_1`)\n[action 14]\nplace fork_2 on dishrack_1\n[state 15]\non(`fork_2`, `dishrack_1`)\n[action 15]\nplace fork_3 on dishrack_1\n[state 16]\non(`fork_3`, `dishrack_1`)\n[action 16]\nmove from dishrack_1 to near-sink_1\n[state 17]\non(`plate_1`, `near-sink_1`)\n[action 17]pick up plate_1\n[state 18]\ninhand(`plate_1`)\n[action 18]\nmove from near-sink_1 to sink_1\n[state 19]\nat(`sink_1`)\n[action 19]\nturn on tap_1\n[state 20]\nison(`tap_1`);isdirty(`plate_1`)\n[action 20]\npick up scrub_1\n[state 21]\ninhand(`scrub_1`)\n[action 21]\nput soap on scrub_1\n[state 22]\nsoapy(`scrub_1`);isdirty(`plate_1`)\n[action 22]\nscrub plate_1 till soapy\n[state 23]\nsoapy(`plate_1`);ison(`tap_1`)\n[action 23]\nrinse plate_1 till clean\n[state 24]\nclean(`plate_1`)\n[action 24]\nturn off tap_1\n[state 25]\nisoff(`tap_1`)\n[action 25]\nmove from sink_1 to dishrack_1\n[state 26]\nat(`dishrack_1`)\n[action 26]\nplace plate_1 on dishrack_1\n"
+                    }
+                ]
             ]
         }
     },
-    "prompts":
-    [
-    ]
+    "prompts": []
 }
