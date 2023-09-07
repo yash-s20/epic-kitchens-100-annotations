@@ -104,9 +104,6 @@ if __name__ == "__main__":
                 filtered_data = data[i*args.max_actions:(i+1)*args.max_actions]
                 if len(filtered_data) < args.min_actions:
                     continue
-                _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
-                if not _data:
-                    continue
                 fil_video_jsons[episode + f"__{idx}"] = filtered_data
                 idx += 1
             # can use entire episode
@@ -142,14 +139,17 @@ if __name__ == "__main__":
                 conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', v_id + '.tar')
             conversation["conversations"] = []
             action_list = ""
+            images = []
             for action in episode:
                 image = "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
                 action_list += action["narration"] + '\n'
                 action_image_pairs[video_id].append((action["narration"],image))
+                images.append(image)
+            conversation["images"] = images
             action_list = action_list[:-2]
             conversation["conversations"].append({
                     "from": "human",
-                    "value": action_list
+                    "value": action_list,
                 })
             # print(len(conversation["conversations"]))
             conversations.append(conversation)
