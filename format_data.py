@@ -1,5 +1,4 @@
 import argparse
-from collections import defaultdict
 import subprocess
 import os
 import csv
@@ -128,7 +127,6 @@ if __name__ == "__main__":
         # for video_id, episode in examples:
             
         conversations = template["prompts"]
-        action_image_pairs = defaultdict(list)
         i = 0
         for video_id, episode in fil_video_jsons.items():
             if i == MAX_EPISODES:
@@ -142,11 +140,13 @@ if __name__ == "__main__":
                 conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', v_id + '.tar')
             conversation["conversations"] = []
             action_list = ""
+            images = []
             for action in episode:
                 image = "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
+                images.append(image)
                 action_list += action["narration"] + '\n'
-                action_image_pairs[video_id].append((action["narration"],image))
             action_list = action_list[:-2]
+            conversation["images"] = images
             conversation["conversations"].append({
                     "from": "human",
                     "value": action_list
@@ -154,6 +154,6 @@ if __name__ == "__main__":
             # print(len(conversation["conversations"]))
             conversations.append(conversation)
         # print(template)
-        json.dump(action_image_pairs, open(args.out_json_file[:-5] + '_imgs.json', 'w'), indent=4)
         json.dump(template, open(args.out_json_file, 'w'), indent=4)
+            
         print("done!")
