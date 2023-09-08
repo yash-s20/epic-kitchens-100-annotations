@@ -123,10 +123,11 @@ if __name__ == "__main__":
     else:
         x = []
         for vid_id in fil_video_jsons:
-            x.extend([{nar["narration_id"]: {
+            x.extend([{
+                "id": nar["narration_id"],
                 "tar_path": os.path.join(args.video_dir, 'rgb_frames', vid_id.split('__')[0] + '.tar'),
                 "image": "./frame_" + "0" * (10 - len(str(nar["picked_frame"]))) + str(nar["picked_frame"]) + ".jpg",
                 "action": nar["narration"]
-            } for nar in fil_video_jsons[vid_id]}])
+                } for nar in fil_video_jsons[vid_id]])
         json.dump(x, open(args.out_json_file, 'w'), indent=4)
         print("done!")
