@@ -121,35 +121,12 @@ if __name__ == "__main__":
         print("Exiting!")
         exit()
     else:
-        template = json.load(open(args.json_template_file, 'r'))
-        # template already has examples
-        # examples = template["examples"]
-        # for video_id, episode in examples:
-            
-        conversations = template["prompts"]
-        i = 0
-        for video_id, episode in fil_video_jsons.items():
-            if i == MAX_EPISODES:
-                break
-            i += 1
-            conversation = {}
-            conversation["id"] = video_id
-            person_id, *_= video_id.split('_') 
-            if not args.no_image:
-                v_id, *_ = video_id.split('__')
-                rgb_dir = 'rgb_frames'
-                if 'val' in args.csv_file:
-                    rgb_dir = 'rgb_frames_val'
-                conversation["tar_path"] = os.path.join(args.video_dir, person_id, rgb_dir, v_id + '.tar')
-            conversation["conversations"] = []
-            for action in episode:
-                conversation["conversations"].append({
-                    "from": "human",
-                    "value": action["narration"],
-                    "image": "./frame_" + ("0" * (10 - len(str(action["picked_frame"])))) + str(action["picked_frame"]) + ".jpg"
-                })
-            # print(len(conversation["conversations"]))
-            conversations.append(conversation)
-        # print(template)
-        json.dump(template, open(args.out_json_file, 'w'), indent=4)
+        x = []
+        for vid_id in fil_video_jsons:
+            x.extend([{nar["narration_id"]: {
+                "tar_path": os.path.join(args.video_dir, 'rgb_frames', vid_id.split('__')[0] + '.tar'),
+                "image": "./frame_" + "0" * (10 - len(str(nar["picked_frame"]))) + str(nar["picked_frame"]) + ".jpg",
+                "action": nar["narration"]
+            } for nar in fil_video_jsons[vid_id]}])
+        json.dump(x, open(args.out_json_file, 'w'), indent=4)
         print("done!")

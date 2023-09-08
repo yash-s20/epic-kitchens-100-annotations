@@ -1,0 +1,1 @@
+python format_data.py --json-template-file epic-kitchens.json --csv-file EPIC_100_dish_washing_train.csv --video-dir /share/portal/ys749/EPIC-KITCHENS/ --out-image-dir test-out --out-json-file formatted.json --max-actions 50
