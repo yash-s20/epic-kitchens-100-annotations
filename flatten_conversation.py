@@ -16,6 +16,6 @@ with open('epic-kitchens.json') as json_file:
                 human_conv["value"] += conversation["value"] + "\n"
             else:
                 gpt_conv["value"] += conversation["value"] + "\n"
-        data["example"]["conversations"][id] = [[human_conv, gpt_conv]]
+        data["example"]["conversations"][id] = [human_conv, gpt_conv]
     with open('epic-kitchens2.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
