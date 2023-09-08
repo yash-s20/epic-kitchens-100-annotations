@@ -137,7 +137,10 @@ if __name__ == "__main__":
             person_id, *_= video_id.split('_') 
             if not args.no_image:
                 v_id, *_ = video_id.split('__')
-                conversation["tar_path"] = os.path.join(args.video_dir, person_id, 'rgb_frames', v_id + '.tar')
+                rgb_dir = 'rgb_frames'
+                if 'val' in args.csv_file:
+                    rgb_dir = 'rgb_frames_val'
+                conversation["tar_path"] = os.path.join(args.video_dir, person_id, rgb_dir, v_id + '.tar')
             conversation["conversations"] = []
             for action in episode:
                 conversation["conversations"].append({
