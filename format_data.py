@@ -103,9 +103,6 @@ if __name__ == "__main__":
                 filtered_data = data[i*args.max_actions:(i+1)*args.max_actions]
                 if len(filtered_data) < args.min_actions:
                     continue
-                _data = [action for action in filtered_data if "wash" in action["narration"].split() or "clean" in action["narration"]]
-                if not _data:
-                    continue
                 fil_video_jsons[episode + f"__{idx}"] = filtered_data
                 idx += 1
             # can use entire episode
@@ -123,9 +120,12 @@ if __name__ == "__main__":
     else:
         x = []
         for vid_id in fil_video_jsons:
+            vid = vid_id.split('__')[0]
+            pid = vid_id.split('_')[0]
             x.extend([{
+                "ep_id": vid_id,
                 "id": nar["narration_id"],
-                "tar_path": os.path.join(args.video_dir, 'rgb_frames', vid_id.split('__')[0] + '.tar'),
+                "tar_path": os.path.join(args.video_dir, pid, 'rgb_frames', vid + '.tar'),
                 "image": "./frame_" + "0" * (10 - len(str(nar["picked_frame"]))) + str(nar["picked_frame"]) + ".jpg",
                 "action": nar["narration"]
                 } for nar in fil_video_jsons[vid_id]])
