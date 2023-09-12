@@ -20,17 +20,16 @@ if __name__ == "__main__":
     parser.add_argument('--seed', type=int, default=42, help='random seed')
     parser.add_argument('--csv-file', type=str, help='csv file to read from')
     parser.add_argument('--video-dir', type=str, help='directory to read videos from')
-    parser.add_argument('--out-image-dir', type=str, help='directory to save screenshots to')
     parser.add_argument('--start-step', type=int, default=1, help="""
                         Steps of this pipeline:
                         1. Convert csv to json
                         2. Filter json to include dishwashing and clip at max_time
                         3. Extract screenshots from videos
                         """)
-    parser.add_argument('--min-actions', type=int, default=5, help='minimum number of actions for a video to be considered')
+    parser.add_argument("--object-data-dir", required=True)
+    parser.add_argument('--min-actions', type=int, default=1, help='minimum number of actions for a video to be considered')
     parser.add_argument('--max-actions', type=int, default=100, help='each episode is clipped at max-actions')
     parser.add_argument('--no-image', action='store_true', help='do not extract images, simply make prompts using action annotations')
-    parser.add_argument('--json-template-file', type=str, default='epic-kitchens.json', help='json template file to use for making prompts')
     parser.add_argument('--out-json-file', type=str, required=True, help='json file to save prompts to')
     args = parser.parse_args()
     random.seed(args.seed)
@@ -43,6 +42,8 @@ if __name__ == "__main__":
     else:
         print("Converting csv to json", end="...")
     header = True
+    object_annotation_jsons = {}
+    dropped_actions = 0
     for row in df:
         if args.start_step > 1:
             break
@@ -62,24 +63,48 @@ if __name__ == "__main__":
         6 is stop_frame
         7 is narration
         """
-        if row[2] not in video_jsons:
-            video_jsons[row[2]] = []
+        video_id = row[2]
+        if video_id not in object_annotation_jsons:
+            object_file = os.path.join(args.object_data_dir, video_id + "-new.json")
+            if not os.path.isfile(object_file):
+                continue
+            video_annotations = json.load(open(object_file, 'r'))['video_annotations']
+            frame_to_objects = {}
+            for frame in video_annotations:
+                frame_no = int(frame['image']['name'].split('frame_')[1][:-4])
+                frame_to_objects[frame_no] = [objct['name'] for objct in frame['annotations']]
+            # print(frame_to_objects)
+            object_annotation_jsons[video_id] = frame_to_objects
+        possible_frames = list(filter(lambda x: int(row[5]) <= x <= int(row[6]), object_annotation_jsons[video_id].keys()))
+        if not possible_frames:
+            dropped_actions += 1
+            continue
+        picked_frame = random.choice(list(possible_frames))
+        if video_id not in video_jsons:
+            video_jsons[video_id] = []
         try:
-            video_jsons[row[2]].append({
+            video_jsons[video_id].append({
                 "narration_id": row[0],
                 "participant_id": row[1],
                 "timestamp": datetime.timedelta(hours=int(row[3][:2]), minutes=int(row[3][3:5]), seconds=float(row[3][6:])).total_seconds(),
-                "picked_frame": random.randint(int(row[5]), int(row[6])),
-                "narration": row[7]
+                "picked_frame": picked_frame,
+                "start_frame": int(row[5]),
+                "end_frame": int(row[6]),
+                "narration": row[7],
+                "objects": object_annotation_jsons[video_id][picked_frame]
             })
         except:
-            video_jsons[row[2]].append({
+            video_jsons[video_id].append({
                 "narration_id": row[0],
                 "participant_id": row[1],
                 "timestamp": datetime.timedelta(hours=int(row[4][:2]), minutes=int(row[4][3:5]), seconds=float(row[4][6:])).total_seconds(),
-                "picked_frame": random.randint(int(row[5]), int(row[6])),
-                "narration": row[7]
+                "picked_frame": picked_frame,
+                "start_frame": int(row[5]),
+                "end_frame": int(row[6]),
+                "narration": row[7],
+                "objects": object_annotation_jsons[video_id][picked_frame]
             })
+    print(f"Dropped actions due to lack of object annotation: {dropped_actions}")
     if args.start_step <= 1:
         json.dump(video_jsons, open(f"{args.csv_file[:-4]}.json", 'w'))
         print("done!")
@@ -105,8 +130,8 @@ if __name__ == "__main__":
                     continue
                 fil_video_jsons[episode + f"__{idx}"] = filtered_data
                 idx += 1
-            # can use entire episode
-            x += len(filtered_data)
+                # can use entire episode
+                x += len(filtered_data)
         print(x)
     if args.start_step <= 2:
         json.dump(fil_video_jsons, open(f"{args.csv_file[:-4]}_filter.json", 'w'), indent=4)
@@ -127,7 +152,10 @@ if __name__ == "__main__":
                 "id": nar["narration_id"],
                 "tar_path": os.path.join(args.video_dir, pid, 'rgb_frames', vid + '.tar'),
                 "image": "./frame_" + "0" * (10 - len(str(nar["picked_frame"]))) + str(nar["picked_frame"]) + ".jpg",
-                "action": nar["narration"]
+                "start_image": "./frame_" + "0" * (10 - len(str(nar["start_frame"]))) + str(nar["start_frame"]) + ".jpg",
+                "end_image": "./frame_" + "0" * (10 - len(str(nar["end_frame"]))) + str(nar["end_frame"]) + ".jpg",
+                "action": nar["narration"],
+                "objects": nar["objects"]
                 } for nar in fil_video_jsons[vid_id]])
         json.dump(x, open(args.out_json_file, 'w'), indent=4)
         print("done!")
